@@ -4,8 +4,15 @@ using UnityEngine.Networking;
 
 public class MenuController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    public InventarController myInventarController;
+    public CharactersController myCharacterController;
+    public MissionController myMissionController;
+
+    // Use this for initialization
+    void Start () {
+        myInventarController = GameObject.Find("InventarController").GetComponent<InventarController>();
+        myCharacterController = GameObject.Find("CharactersController").GetComponent<CharactersController>();
+        myMissionController = GameObject.Find("MissionController").GetComponent<MissionController>();
         StartCoroutine(GetText());
     }
 
@@ -39,6 +46,8 @@ public class MenuController : MonoBehaviour {
 
                 // Or retrieve results as binary data
                 byte[] results = wwwInventar.downloadHandler.data;
+
+                //myInventarController. Funktion die Inventar im Script InventarController aufruft
             }
             else if (wwwCharacter.downloadHandler.data != null)
             {
@@ -48,6 +57,7 @@ public class MenuController : MonoBehaviour {
 
                 // Or retrieve results as binary data
                 byte[] results = wwwCharacter.downloadHandler.data;
+                //myCharactersController. Funktion die Character im Script CharactersController aufruft
             }
             else if (wwwMission.downloadHandler.data != null)
             {
@@ -57,6 +67,7 @@ public class MenuController : MonoBehaviour {
 
                 // Or retrieve results as binary data
                 byte[] results = wwwMission.downloadHandler.data;
+                //myMissionController. Funktion die Mission im Script MissionController aufruft
 
             }
             else
