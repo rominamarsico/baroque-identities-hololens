@@ -42,8 +42,13 @@ public class MenuController : MonoBehaviour
         /* myInventarController = GameObject.Find("InventarController").GetComponent<InventarController>();
          myCharacterController = GameObject.Find("CharactersController").GetComponent<CharactersController>();
          myMissionController = GameObject.Find("MissionController").GetComponent<MissionController>();*/
-        StartCoroutine(GetText());
+        //StartCoroutine(GetText());
 
+    }
+
+    void Update()
+    {
+        StartCoroutine(GetText());
     }
 
     IEnumerator GetText()
@@ -66,42 +71,48 @@ public class MenuController : MonoBehaviour
             Debug.Log(wwwInventar.error);
             Debug.Log(wwwMission.error);
             Debug.Log(wwwCharacter.error);
+        }
 
+        string inventar = wwwInventar.downloadHandler.text;
+        string mission = wwwMission.downloadHandler.text;
+        string character = wwwCharacter.downloadHandler.text;
+        Debug.Log(inventar.Length);
+        Debug.Log(mission.Length);
+        Debug.Log(character.Length);
 
-            if (wwwInventar.downloadHandler.data != null)
-            {
-                // Show results as text
-                Debug.Log("JSON from realtime database: ");
-                Debug.Log(wwwInventar.downloadHandler.text);
+        if (inventar.Length == 11) // always 3 letter more that the actual word has (Inventar = 7 + 3 = 11)
+        {
+            // Show results as text
+            Debug.Log("Inventar database text: ");
+            Debug.Log(wwwInventar.downloadHandler.text);
 
-                // Or retrieve results as binary data
-                byte[] results = wwwInventar.downloadHandler.data;
-                Inventar();
-            }
-            else if (wwwCharacter.downloadHandler.data != null)
-            {
-                // Show results as text
-                Debug.Log("JSON from realtime database: ");
-                Debug.Log(wwwCharacter.downloadHandler.text);
+            // Or retrieve results as binary data
+            byte[] results = wwwInventar.downloadHandler.data;
+            Inventar();
+        }
+        else if (character.Length == 12)
+        {
+            // Show results as text
+            Debug.Log("Character database text: ");
+            Debug.Log(wwwCharacter.downloadHandler.text);
 
-                // Or retrieve results as binary data
-                byte[] results = wwwCharacter.downloadHandler.data;
-                Characters();
-            }
-            else if (wwwMission.downloadHandler.data != null)
-            {
-                // Show results as text
-                Debug.Log("JSON from realtime database: ");
-                Debug.Log(wwwMission.downloadHandler.text);
+            // Or retrieve results as binary data
+            byte[] results = wwwCharacter.downloadHandler.data;
+            Characters();
+        }
+        else if (mission.Length == 10)
+        {
+            // Show results as text
+            Debug.Log("Mission database text: ");
+            Debug.Log(wwwMission.downloadHandler.text);
 
-                // Or retrieve results as binary data
-                byte[] results = wwwMission.downloadHandler.data;
-                Mission();
-            }
-            else
-            {
-                Debug.Log("No MenueController is triggert.");
-            }
+            // Or retrieve results as binary data
+            byte[] results = wwwMission.downloadHandler.data;
+            Mission();
+        }
+        else
+        {
+            Debug.Log("No MenueController is triggert.");
         }
 
     }
@@ -110,6 +121,7 @@ public class MenuController : MonoBehaviour
         portraitludwig.SetActive(true);
         pinsel.SetActive(true);
         rotehand.SetActive(true);
+        Debug.Log("Inventar Function");
     }
 
     public void Characters () {
