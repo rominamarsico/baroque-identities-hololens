@@ -4,10 +4,19 @@ using UnityEngine.Networking;
 
 public class InventarController : MonoBehaviour
 {
+    void OnAwake()
+    {
+        Debug.Log("Hantel offen");
+        GetComponentInParent<MenuController>().HideInventar();
+        //skeywordManager.StartKeywordRecognizer ();
+    }
+
     void Start()
     {
         StartCoroutine(GetText());
     }
+
+
 
     IEnumerator GetText()
     {

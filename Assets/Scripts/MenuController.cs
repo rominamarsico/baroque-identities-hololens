@@ -2,18 +2,48 @@
 using System.Collections;
 using UnityEngine.Networking;
 
-public class MenuController : MonoBehaviour {
+public class MenuController : MonoBehaviour
+{
 
-    public InventarController myInventarController;
+    /*public InventarController myInventarController;
     public CharactersController myCharacterController;
-    public MissionController myMissionController;
+    public MissionController myMissionController;*/
+    //Inventar von Beginn an
+    public GameObject pinsel;
+    public GameObject portraitludwig;
+    public GameObject rotehand;
+    public GameObject gun_HvG;
+    public GameObject gun_KvP;
+    public GameObject gun_LvH;
+    public GameObject windkompass_anim;
 
+    public GameObject[] InventaryObjects; 
+
+    //Inventar Atelier
+
+    //Inventar Tatort
+
+    public void HideInventar(){
+        portraitludwig.SetActive(false);
+        pinsel.SetActive(false);
+        rotehand.SetActive(false);
+        gun_HvG.SetActive(false);
+        gun_KvP.SetActive(false);
+        gun_LvH.SetActive(false);
+        windkompass_anim.SetActive(false);
+    }
     // Use this for initialization
     void Start () {
-        myInventarController = GameObject.Find("InventarController").GetComponent<InventarController>();
-        myCharacterController = GameObject.Find("CharactersController").GetComponent<CharactersController>();
-        myMissionController = GameObject.Find("MissionController").GetComponent<MissionController>();
+        InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
+        for (int i = 0; i < InventaryObjects.Length; i++)
+        {
+            Debug.Log("Inventar Number " + i + " is named " + InventaryObjects[i].name);
+        }
+        /* myInventarController = GameObject.Find("InventarController").GetComponent<InventarController>();
+         myCharacterController = GameObject.Find("CharactersController").GetComponent<CharactersController>();
+         myMissionController = GameObject.Find("MissionController").GetComponent<MissionController>();*/
         StartCoroutine(GetText());
+
     }
 
     IEnumerator GetText()
@@ -46,8 +76,7 @@ public class MenuController : MonoBehaviour {
 
                 // Or retrieve results as binary data
                 byte[] results = wwwInventar.downloadHandler.data;
-
-                //myInventarController. Funktion die Inventar im Script InventarController aufruft
+                Inventar();
             }
             else if (wwwCharacter.downloadHandler.data != null)
             {
@@ -57,7 +86,7 @@ public class MenuController : MonoBehaviour {
 
                 // Or retrieve results as binary data
                 byte[] results = wwwCharacter.downloadHandler.data;
-                //myCharactersController. Funktion die Character im Script CharactersController aufruft
+                Characters();
             }
             else if (wwwMission.downloadHandler.data != null)
             {
@@ -67,8 +96,7 @@ public class MenuController : MonoBehaviour {
 
                 // Or retrieve results as binary data
                 byte[] results = wwwMission.downloadHandler.data;
-                //myMissionController. Funktion die Mission im Script MissionController aufruft
-
+                Mission();
             }
             else
             {
@@ -76,5 +104,19 @@ public class MenuController : MonoBehaviour {
             }
         }
 
+    }
+
+    public void Inventar (){
+        portraitludwig.SetActive(true);
+        pinsel.SetActive(true);
+        rotehand.SetActive(true);
+    }
+
+    public void Characters () {
+        Debug.Log("Characters");
+    }
+
+    public void Mission () {
+        Debug.Log("Mission");
     }
 }
