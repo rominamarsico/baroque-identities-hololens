@@ -8,7 +8,7 @@ public class MenuController : MonoBehaviour
     /*public InventarController myInventarController;
     public CharactersController myCharacterController;
     public MissionController myMissionController;*/
-    //Inventar von Beginn an
+    //Inventar Beginn
     public GameObject pinsel;
     public GameObject portraitludwig;
     public GameObject rotehand;
@@ -47,7 +47,6 @@ public class MenuController : MonoBehaviour
         /* myInventarController = GameObject.Find("InventarController").GetComponent<InventarController>();
          myCharacterController = GameObject.Find("CharactersController").GetComponent<CharactersController>();
          myMissionController = GameObject.Find("MissionController").GetComponent<MissionController>();*/
-        //StartCoroutine(GetText());
 
     }
 
@@ -55,6 +54,7 @@ public class MenuController : MonoBehaviour
     {
         StartCoroutine(GetText());
     }
+    // TODO:
     //Switch für newInventar stuff add at first position to the Array --> So stimmen Unten immer die ersten drei Objekte.
 
     IEnumerator GetText()
@@ -82,11 +82,8 @@ public class MenuController : MonoBehaviour
         string inventar = wwwInventar.downloadHandler.text;
         string mission = wwwMission.downloadHandler.text;
         string character = wwwCharacter.downloadHandler.text;
-        /*Debug.Log(inventar.Length);
-        Debug.Log(mission.Length);
-        Debug.Log(character.Length);*/
 
-        if (inventar.Contains("Inventar")) // inventar.Length == 11, always 3 letter more that the actual word has (Inventar = 7 + 3 = 11)
+        if (inventar.Contains("Inventar"))
         {
             // Show results as text
             //Debug.Log("Inventar database text: ");
@@ -96,7 +93,7 @@ public class MenuController : MonoBehaviour
             //byte[] results = wwwInventar.downloadHandler.data;
             Inventar();
         }
-        else if (character.Contains("Character")) // character.Length == 12
+        else if (character.Contains("Character"))
         {
             // Show results as text
             //Debug.Log("Character database text: ");
@@ -106,7 +103,7 @@ public class MenuController : MonoBehaviour
             //byte[] results = wwwCharacter.downloadHandler.data;
             Characters();
         }
-        else if (mission.Contains("Mission")) // mission.Length == 10
+        else if (mission.Contains("Mission"))
         {
             // Show results as text
             //Debug.Log("Mission database text: ");
@@ -136,6 +133,7 @@ public class MenuController : MonoBehaviour
         MenuObjectThree.transform.position = MenuPos3;
         MenuObjectThree.SetActive(true);
 
+        // TODO:
         //void on Select Pfeil rechts evtl 3 for schleifen, die so oft laufen, wie eine ClickCounter ausgeführt wurde. 
         //Durch die dann den ArrayIndex der drei Objecte + drei zählt. und dann Set Active setzt und dir position setzt. 
         //Die Ursprünglichen drei Objecte obendrüber werden dann False gesetzt
