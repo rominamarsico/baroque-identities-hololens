@@ -17,7 +17,11 @@ public class MenuController : MonoBehaviour
     public GameObject gun_LvH;
     public GameObject windkompass_anim;
 
-    public GameObject[] InventaryObjects; 
+    public GameObject[] InventaryObjects;
+
+    public Vector3 MenuPos1 = new Vector3(1, 0, 0.5f);
+    public Vector3 MenuPos2 = new Vector3(0, 0, 0.5f);
+    public Vector3 MenuPos3 = new Vector3(-1, 0, 0.5f);
 
     //Inventar Atelier
 
@@ -38,6 +42,7 @@ public class MenuController : MonoBehaviour
         for (int i = 0; i < InventaryObjects.Length; i++)
         {
             Debug.Log("Inventar Number " + i + " is named " + InventaryObjects[i].name);
+
         }
         /* myInventarController = GameObject.Find("InventarController").GetComponent<InventarController>();
          myCharacterController = GameObject.Find("CharactersController").GetComponent<CharactersController>();
@@ -50,6 +55,7 @@ public class MenuController : MonoBehaviour
     {
         StartCoroutine(GetText());
     }
+    //Switch für newInventar stuff add at first position to the Array --> So stimmen Unten immer die ersten drei Objekte.
 
     IEnumerator GetText()
     {
@@ -118,9 +124,28 @@ public class MenuController : MonoBehaviour
     }
 
     public void Inventar (){
-        portraitludwig.SetActive(true);
+        var MenuObjectOne = InventaryObjects[0];
+        MenuObjectOne.transform.position = MenuPos1;
+        MenuObjectOne.SetActive(true);
+
+        var MenuObjectTwo = InventaryObjects[1];
+        MenuObjectTwo.transform.position = MenuPos2;
+        MenuObjectTwo.SetActive(true);
+
+        var MenuObjectThree = InventaryObjects[2];
+        MenuObjectThree.transform.position = MenuPos3;
+        MenuObjectThree.SetActive(true);
+
+        //void on Select Pfeil rechts evtl 3 for schleifen, die so oft laufen, wie eine ClickCounter ausgeführt wurde. 
+        //Durch die dann den ArrayIndex der drei Objecte + drei zählt. und dann Set Active setzt und dir position setzt. 
+        //Die Ursprünglichen drei Objecte obendrüber werden dann False gesetzt
+        //Gleiche umgekehrt mit Pfeil zurück
+        //Sobald es nicht nochmal weiter geht dürfen die Pfeile nicht mehr angezeigt werden
+        //Muss noch einen else part geben, wenn nur zwei oder ein Object bei der Zählung übrig bleiben, sodass dann kein Fehler kommt, dass Objekte fehlen. 
+        
+       /* portraitludwig.SetActive(true);
         pinsel.SetActive(true);
-        rotehand.SetActive(true);
+        rotehand.SetActive(true);*/
         Debug.Log("Inventar Function");
     }
 
