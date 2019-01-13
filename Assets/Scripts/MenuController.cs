@@ -82,43 +82,43 @@ public class MenuController : MonoBehaviour
         string inventar = wwwInventar.downloadHandler.text;
         string mission = wwwMission.downloadHandler.text;
         string character = wwwCharacter.downloadHandler.text;
-        Debug.Log(inventar.Length);
+        /*Debug.Log(inventar.Length);
         Debug.Log(mission.Length);
-        Debug.Log(character.Length);
+        Debug.Log(character.Length);*/
 
-        if (inventar.Length == 11) // always 3 letter more that the actual word has (Inventar = 7 + 3 = 11)
+        if (inventar.Contains("Inventar")) // inventar.Length == 11, always 3 letter more that the actual word has (Inventar = 7 + 3 = 11)
         {
             // Show results as text
-            Debug.Log("Inventar database text: ");
+            //Debug.Log("Inventar database text: ");
             Debug.Log(wwwInventar.downloadHandler.text);
 
             // Or retrieve results as binary data
-            byte[] results = wwwInventar.downloadHandler.data;
+            //byte[] results = wwwInventar.downloadHandler.data;
             Inventar();
         }
-        else if (character.Length == 12)
+        else if (character.Contains("Character")) // character.Length == 12
         {
             // Show results as text
-            Debug.Log("Character database text: ");
+            //Debug.Log("Character database text: ");
             Debug.Log(wwwCharacter.downloadHandler.text);
 
             // Or retrieve results as binary data
-            byte[] results = wwwCharacter.downloadHandler.data;
+            //byte[] results = wwwCharacter.downloadHandler.data;
             Characters();
         }
-        else if (mission.Length == 10)
+        else if (mission.Contains("Mission")) // mission.Length == 10
         {
             // Show results as text
-            Debug.Log("Mission database text: ");
+            //Debug.Log("Mission database text: ");
             Debug.Log(wwwMission.downloadHandler.text);
 
             // Or retrieve results as binary data
-            byte[] results = wwwMission.downloadHandler.data;
+            //byte[] results = wwwMission.downloadHandler.data;
             Mission();
         }
         else
         {
-            Debug.Log("No MenueController is triggert.");
+            Debug.Log("No menu controller is triggert.");
         }
 
     }
