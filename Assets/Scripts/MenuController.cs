@@ -49,6 +49,7 @@ public class MenuController : MonoBehaviour
          myMissionController = GameObject.Find("MissionController").GetComponent<MissionController>();*/
         //StartCoroutine(GetText());
 
+        Debug.Log(InventaryObjects.Length);
     }
 
     void Update()
@@ -61,22 +62,30 @@ public class MenuController : MonoBehaviour
     {
         UnityWebRequest wwwInventar = new UnityWebRequest("https://baroque-identities.firebaseio.com/Inventar/val/.json?print=pretty");
         wwwInventar.downloadHandler = new DownloadHandlerBuffer();
+        wwwInventar.chunkedTransfer = false;
         yield return wwwInventar.SendWebRequest();
 
         UnityWebRequest wwwCharacter = new UnityWebRequest("https://baroque-identities.firebaseio.com/Character/val/.json?print=pretty");
         wwwCharacter.downloadHandler = new DownloadHandlerBuffer();
+        wwwCharacter.chunkedTransfer = false;
         yield return wwwCharacter.SendWebRequest();
 
         UnityWebRequest wwwMission = new UnityWebRequest("https://baroque-identities.firebaseio.com/Mission/val/.json?print=pretty");
         wwwMission.downloadHandler = new DownloadHandlerBuffer();
+        wwwMission.chunkedTransfer = false;
         yield return wwwMission.SendWebRequest();
 
         if (wwwInventar.isNetworkError || wwwInventar.isHttpError || wwwMission.isNetworkError || wwwMission.isHttpError || wwwCharacter.isNetworkError || wwwCharacter.isHttpError)
         {
             Debug.Log("Error: ");
+
             Debug.Log(wwwInventar.error);
             Debug.Log(wwwMission.error);
             Debug.Log(wwwCharacter.error);
+
+            Debug.Log(wwwInventar.responseCode);
+            Debug.Log(wwwMission.responseCode);
+            Debug.Log(wwwCharacter.responseCode);
         }
 
         string inventar = wwwInventar.downloadHandler.text;
