@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+//using Academy.HoloToolkit.Unity; --> Müssen wir noch runterladen
 
 public class MenuController : MonoBehaviour
 {
@@ -26,19 +27,27 @@ public class MenuController : MonoBehaviour
     //Inventar Atelier
 
     //Inventar Tatort
+    void Awake()
+    {
+        InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
+    }
 
     public void HideInventar(){
-        portraitludwig.SetActive(false);
+        /*portraitludwig.SetActive(false);
         pinsel.SetActive(false);
         rotehand.SetActive(false);
         gun_HvG.SetActive(false);
         gun_KvP.SetActive(false);
         gun_LvH.SetActive(false);
-        windkompass_anim.SetActive(false);
+        windkompass_anim.SetActive(false);*/
+        foreach (GameObject _gameObject in InventaryObjects)
+        {
+            gameObject.SetActive(false);
+        }
     }
     // Use this for initialization
     void Start () {
-        InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
+
         for (int i = 0; i < InventaryObjects.Length; i++)
         {
             Debug.Log("Inventar Number " + i + " is named " + InventaryObjects[i].name);
