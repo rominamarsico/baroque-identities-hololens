@@ -4,9 +4,9 @@ using UnityEngine.Networking;
 
 public class InventarController : MonoBehaviour
 {
-    void OnAwake()
+    void Awake()
     {
-        Debug.Log("Hantel offen");
+        Debug.Log("HideInventar");
         GetComponentInParent<MenuController>().HideInventar();
         //skeywordManager.StartKeywordRecognizer ();
     }

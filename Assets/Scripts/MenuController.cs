@@ -19,9 +19,9 @@ public class MenuController : MonoBehaviour
 
     public GameObject[] InventaryObjects;
 
-    public Vector3 MenuPos1 = new Vector3(1, 0, 0.5f);
-    public Vector3 MenuPos2 = new Vector3(0, 0, 0.5f);
-    public Vector3 MenuPos3 = new Vector3(-1, 0, 0.5f);
+    public Vector3 MenuPos1 = new Vector3(1, 0, 1);
+    public Vector3 MenuPos2 = new Vector3(0, 0, 1);
+    public Vector3 MenuPos3 = new Vector3(-1, 0, 1);
 
     //Inventar Atelier
 
