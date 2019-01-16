@@ -19,6 +19,7 @@ public class MenuController : MonoBehaviour
     public GameObject gun_KvP;
     public GameObject gun_LvH;
     public GameObject windkompass_anim;
+ 
 
     public GameObject[] InventaryObjects;
 
@@ -34,6 +35,7 @@ public class MenuController : MonoBehaviour
     }
     // Use this for initialization
     void Start () {
+
 
         InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
 
@@ -139,7 +141,7 @@ public class MenuController : MonoBehaviour
 
     public void Inventar () {
         Arrows();
-        var ClickCounterRight = GetComponentInChildren<CursorArrowRechts>().ClickRight;
+        var ClickCounterRight = GameObject.Find("CursorArrowRechts").GetComponent<CursorArrowRechts>().ClickRight;
         Debug.Log(ClickCounterRight);
         var MenuObjectOne = InventaryObjects[0];
         MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
