@@ -6,9 +6,6 @@ using UnityEngine.Networking;
 public class MenuController : MonoBehaviour
 {
 
-    /*public InventarController myInventarController;
-    public CharactersController myCharacterController;
-    public MissionController myMissionController;*/
     //Inventar von Beginn an
     public GameObject CursorArrowRechts;
     public GameObject CursorArrowLinks;
@@ -19,7 +16,7 @@ public class MenuController : MonoBehaviour
     public GameObject gun_KvP;
     public GameObject gun_LvH;
     public GameObject windkompass_anim;
- 
+    public int counter;
 
     public GameObject[] InventaryObjects;
 
@@ -44,11 +41,7 @@ public class MenuController : MonoBehaviour
             Debug.Log("Inventar Number " + i + " is named " + InventaryObjects[i].name);
 
         }
-        /* myInventarController = GameObject.Find("InventarController").GetComponent<InventarController>();
-         myCharacterController = GameObject.Find("CharactersController").GetComponent<CharactersController>();
-         myMissionController = GameObject.Find("MissionController").GetComponent<MissionController>();*/
-        //StartCoroutine(GetText());
-
+   
         Debug.Log(InventaryObjects.Length);
     }
 
@@ -142,33 +135,71 @@ public class MenuController : MonoBehaviour
     public void Inventar () {
         Arrows();
         var ClickCounterRight = GameObject.Find("CursorArrowRechts").GetComponent<CursorArrowRechts>().ClickRight;
-        Debug.Log(ClickCounterRight);
-        var MenuObjectOne = InventaryObjects[0];
-        MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
-        MenuObjectOne.SetActive(true);
+        var CounterObject = GameObject.Find("CursorArrowRechts").GetComponent<CursorArrowRechts>().ObjectCounter;
+        //Debug.Log(ClickCounterRight);
+        //Debug.Log(CounterObject);
 
-        var MenuObjectTwo = InventaryObjects[1];
-        MenuObjectTwo.SetActive(true);
-        MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
+        for (int i = ClickCounterRight; i <InventaryObjects.Length/3; i++)
+        {
 
-        var MenuObjectThree = InventaryObjects[2];
-        MenuObjectThree.SetActive(true);
-        MenuObjectThree.transform.position = new Vector3(4, 0, 9);
+            //var check = i;
+            Debug.Log(i);
 
+
+            var MenuObjectOne = InventaryObjects[0 + CounterObject];
+            MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
+            MenuObjectOne.SetActive(true);
+
+            var MenuObjectTwo = InventaryObjects[1 + CounterObject];
+            MenuObjectTwo.SetActive(true);
+            MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
+
+            var MenuObjectThree = InventaryObjects[2 + CounterObject];
+            MenuObjectThree.SetActive(true);
+            MenuObjectThree.transform.position = new Vector3(4, 0, 9);
+
+
+        }
         //void on Select Pfeil rechts evtl 3 for schleifen, die so oft laufen, wie eine ClickCounter ausgeführt wurde. 
         //Durch die dann den ArrayIndex der drei Objecte + drei zählt. und dann Set Active setzt und dir position setzt. 
         //Die Ursprünglichen drei Objecte obendrüber werden dann False gesetzt
         //Gleiche umgekehrt mit Pfeil zurück
         //Sobald es nicht nochmal weiter geht dürfen die Pfeile nicht mehr angezeigt werden
         //Muss noch einen else part geben, wenn nur zwei oder ein Object bei der Zählung übrig bleiben, sodass dann kein Fehler kommt, dass Objekte fehlen. 
-        
-      
+
+
         Debug.Log("Inventar Function");
     }
 
     public void SelectPortraitLudwig()
     {
         Debug.Log("Click on portrait of Ludwig");
+    }
+
+    public void SelectPinsel()
+    {
+        Debug.Log("Click on pinsel");
+    }
+
+    public void SelectRoteHand()
+    {
+        Debug.Log("Click on rote Hand");
+    }
+    public void SelectGunHvG()
+    {
+        Debug.Log("Click on GunHvG");
+    }
+    public void SelectGunKvP()
+    {
+        Debug.Log("Click on GunKvP");
+    }
+    public void SelectGunLvH()
+    {
+        Debug.Log("Click on GunLvH");
+    }
+    public void SelectWindcompass()
+    {
+        Debug.Log("Click on Windcompass");
     }
 
     public void Characters () {
