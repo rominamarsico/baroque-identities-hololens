@@ -20,26 +20,15 @@ public class MenuController : MonoBehaviour
 
     public GameObject[] InventaryObjects;
 
-    public Vector3 MenuPos1 = new Vector3(1, 0, 1);
-    public Vector3 MenuPos2 = new Vector3(0, 0, 1);
-    public Vector3 MenuPos3 = new Vector3(-1, 0, 1);
+    public Vector3 MenuPos1 = new Vector3(1, 0, 7);
+    public Vector3 MenuPos2 = new Vector3(0, 0, 7);
+    public Vector3 MenuPos3 = new Vector3(-1, 0, 7);
 
     //Inventar Atelier
 
     //Inventar Tatort
-    void Awake()
-    {
-        InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
-    }
 
     public void HideInventar(){
-        /*portraitludwig.SetActive(false);
-        pinsel.SetActive(false);
-        rotehand.SetActive(false);
-        gun_HvG.SetActive(false);
-        gun_KvP.SetActive(false);
-        gun_LvH.SetActive(false);
-        windkompass_anim.SetActive(false);*/
         foreach (GameObject _gameObject in InventaryObjects)
         {
             gameObject.SetActive(false);
@@ -47,6 +36,8 @@ public class MenuController : MonoBehaviour
     }
     // Use this for initialization
     void Start () {
+
+        InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
 
         for (int i = 0; i < InventaryObjects.Length; i++)
         {
@@ -104,7 +95,7 @@ public class MenuController : MonoBehaviour
         Debug.Log(mission.Length);
         Debug.Log(character.Length);*/
 
-        if (inventar.Contains("Inventar")) // inventar.Length == 11, always 3 letter more that the actual word has (Inventar = 7 + 3 = 11)
+        if (inventar.Contains("Inventar"))
         {
             // Show results as text
             //Debug.Log("Inventar database text: ");
@@ -137,22 +128,23 @@ public class MenuController : MonoBehaviour
         else
         {
             Debug.Log("No menu controller is triggert.");
+            HideInventar();
         }
 
     }
 
     public void Inventar (){
         var MenuObjectOne = InventaryObjects[0];
-        MenuObjectOne.transform.position = MenuPos1;
+        MenuObjectOne.transform.position = new Vector3(-5, 0, 9);
         MenuObjectOne.SetActive(true);
 
         var MenuObjectTwo = InventaryObjects[1];
-        MenuObjectTwo.transform.position = MenuPos2;
         MenuObjectTwo.SetActive(true);
+        MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
 
         var MenuObjectThree = InventaryObjects[2];
-        MenuObjectThree.transform.position = MenuPos3;
         MenuObjectThree.SetActive(true);
+        MenuObjectThree.transform.position = new Vector3(5, 0, 9);
 
         //void on Select Pfeil rechts evtl 3 for schleifen, die so oft laufen, wie eine ClickCounter ausgeführt wurde. 
         //Durch die dann den ArrayIndex der drei Objecte + drei zählt. und dann Set Active setzt und dir position setzt. 

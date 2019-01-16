@@ -7,6 +7,7 @@ public class InventarController : MonoBehaviour
     void Awake()
     {
         Debug.Log("HideInventar");
+        // GetComponentInParent<MenuController>().InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
         GetComponentInParent<MenuController>().HideInventar();
         //skeywordManager.StartKeywordRecognizer ();
     }
