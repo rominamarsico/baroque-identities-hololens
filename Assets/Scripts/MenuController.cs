@@ -139,6 +139,8 @@ public class MenuController : MonoBehaviour
 
     public void Inventar () {
         Arrows();
+        var ClickCounterRight = GetComponentInChildren<CursorArrowRechts>().ClickRight;
+        Debug.Log(ClickCounterRight);
         var MenuObjectOne = InventaryObjects[0];
         MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
         MenuObjectOne.SetActive(true);
@@ -158,9 +160,7 @@ public class MenuController : MonoBehaviour
         //Sobald es nicht nochmal weiter geht dürfen die Pfeile nicht mehr angezeigt werden
         //Muss noch einen else part geben, wenn nur zwei oder ein Object bei der Zählung übrig bleiben, sodass dann kein Fehler kommt, dass Objekte fehlen. 
         
-       /* portraitludwig.SetActive(true);
-        pinsel.SetActive(true);
-        rotehand.SetActive(true);*/
+      
         Debug.Log("Inventar Function");
     }
 
