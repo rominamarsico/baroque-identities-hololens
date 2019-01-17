@@ -134,8 +134,8 @@ public class MenuController : MonoBehaviour
 
     public void Inventar () {
         Arrows();
-        var ClickCounterRight = GameObject.Find("CursorArrowRechts").GetComponent<CursorArrowRechts>().ClickRight;
-        var CounterObject = GameObject.Find("CursorArrowRechts").GetComponent<CursorArrowRechts>().ObjectCounter;
+        var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
+        var CounterObject = CursorArrowRechts.GetComponent<CursorArrowRechts>().ObjectCounter;
         //Debug.Log(ClickCounterRight);
         //Debug.Log(CounterObject);
 
@@ -155,10 +155,13 @@ public class MenuController : MonoBehaviour
                 var MenuObjectOne = InventaryObjects[0 + CounterObject];
                 MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
                 MenuObjectOne.SetActive(MenuObjectOne);
-                for (int a = 0; a < 0 + CounterObject;a++){
+                for (int a = 0; a < 0 + CounterObject; a++)
+                {
                     InventaryObjects[a].SetActive(false);
                 }
             }
+            else
+                CursorArrowRechts.SetActive(false);
 
             if (1 + CounterObject < InventaryObjects.Length)
             {
@@ -166,12 +169,18 @@ public class MenuController : MonoBehaviour
                 MenuObjectTwo.SetActive(MenuObjectTwo);
                 MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
             }
+            else
+                CursorArrowRechts.SetActive(false);
+            //GameObject.Find("CursorArrowRechts").SetActive(false);
+
             if (2 + CounterObject < InventaryObjects.Length)
             {
                 var MenuObjectThree = InventaryObjects[2 + CounterObject];
                 MenuObjectThree.SetActive(MenuObjectThree);
                 MenuObjectThree.transform.position = new Vector3(4, 0, 9);
             }
+            //else
+                //GameObject.Find("CursorArrowRechts").SetActive(false);
 
         }
 
