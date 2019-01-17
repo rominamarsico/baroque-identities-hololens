@@ -139,7 +139,7 @@ public class MenuController : MonoBehaviour
         //Debug.Log(ClickCounterRight);
         //Debug.Log(CounterObject);
 
-        for (int i = ClickCounterRight; i <InventaryObjects.Length/3; i++)
+        for (int i = ClickCounterRight; i <=InventaryObjects.Length/3; i++)
         {
 
             //var check = i;
@@ -149,8 +149,8 @@ public class MenuController : MonoBehaviour
             //Die If schleife dann jeweils vor den drei Blöcken. 
             //In erster schleife for all Objects bevor des Index MenüObject One alle Objecte set active false
 
-
-            if (0 + CounterObject <= InventaryObjects.Length)
+            Debug.Log("Counter:"+CounterObject);
+            if (0 + CounterObject < InventaryObjects.Length)
             {
                 var MenuObjectOne = InventaryObjects[0 + CounterObject];
                 MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
@@ -160,13 +160,13 @@ public class MenuController : MonoBehaviour
                 }
             }
 
-            if (1 + CounterObject <= InventaryObjects.Length)
+            if (1 + CounterObject < InventaryObjects.Length)
             {
                 var MenuObjectTwo = InventaryObjects[1 + CounterObject];
                 MenuObjectTwo.SetActive(MenuObjectTwo);
                 MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
             }
-            if (2 + CounterObject <= InventaryObjects.Length)
+            if (2 + CounterObject < InventaryObjects.Length)
             {
                 var MenuObjectThree = InventaryObjects[2 + CounterObject];
                 MenuObjectThree.SetActive(MenuObjectThree);
