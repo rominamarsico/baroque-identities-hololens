@@ -144,24 +144,37 @@ public class MenuController : MonoBehaviour
 
             //var check = i;
             Debug.Log(i);
+            //vielleicht auch jeweils Index 0,1,2 mit CounterObject in einer Variable speichern
+            //und schauen ob dann die Zahl noch <= die Länge von InventaryObjects ist. 
+            //Die If schleife dann jeweils vor den drei Blöcken. 
+            //In erster schleife for all Objects bevor des Index MenüObject One alle Objecte set active false
 
 
-            var MenuObjectOne = InventaryObjects[0 + CounterObject];
-            MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
-            MenuObjectOne.SetActive(true);
+            if (0 + CounterObject <= InventaryObjects.Length)
+            {
+                var MenuObjectOne = InventaryObjects[0 + CounterObject];
+                MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
+                MenuObjectOne.SetActive(MenuObjectOne);
+                for (int a = 0; a < 0 + CounterObject;a++){
+                    InventaryObjects[a].SetActive(false);
+                }
+            }
 
-            var MenuObjectTwo = InventaryObjects[1 + CounterObject];
-            MenuObjectTwo.SetActive(true);
-            MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
-
-            var MenuObjectThree = InventaryObjects[2 + CounterObject];
-            MenuObjectThree.SetActive(true);
-            MenuObjectThree.transform.position = new Vector3(4, 0, 9);
-
+            if (1 + CounterObject <= InventaryObjects.Length)
+            {
+                var MenuObjectTwo = InventaryObjects[1 + CounterObject];
+                MenuObjectTwo.SetActive(MenuObjectTwo);
+                MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
+            }
+            if (2 + CounterObject <= InventaryObjects.Length)
+            {
+                var MenuObjectThree = InventaryObjects[2 + CounterObject];
+                MenuObjectThree.SetActive(MenuObjectThree);
+                MenuObjectThree.transform.position = new Vector3(4, 0, 9);
+            }
 
         }
-        //void on Select Pfeil rechts evtl 3 for schleifen, die so oft laufen, wie eine ClickCounter ausgeführt wurde. 
-        //Durch die dann den ArrayIndex der drei Objecte + drei zählt. und dann Set Active setzt und dir position setzt. 
+
         //Die Ursprünglichen drei Objecte obendrüber werden dann False gesetzt
         //Gleiche umgekehrt mit Pfeil zurück
         //Sobald es nicht nochmal weiter geht dürfen die Pfeile nicht mehr angezeigt werden
