@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
-//using Academy.HoloToolkit.Unity; --> Müssen wir noch runterladen
+
 
 public class MenuController : MonoBehaviour
 {
@@ -84,9 +84,7 @@ public class MenuController : MonoBehaviour
         string inventar = wwwInventar.downloadHandler.text;
         string mission = wwwMission.downloadHandler.text;
         string character = wwwCharacter.downloadHandler.text;
-        /*Debug.Log(inventar.Length);
-        Debug.Log(mission.Length);
-        Debug.Log(character.Length);*/
+      
 
         if (inventar.Contains("Inventar"))
         {
@@ -136,20 +134,10 @@ public class MenuController : MonoBehaviour
         Arrows();
         var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
         var CounterObject = CursorArrowRechts.GetComponent<CursorArrowRechts>().ObjectCounter;
-        //Debug.Log(ClickCounterRight);
-        //Debug.Log(CounterObject);
 
         for (int i = ClickCounterRight; i <=InventaryObjects.Length/3; i++)
         {
-
-            //var check = i;
-            Debug.Log(i);
-            //vielleicht auch jeweils Index 0,1,2 mit CounterObject in einer Variable speichern
-            //und schauen ob dann die Zahl noch <= die Länge von InventaryObjects ist. 
-            //Die If schleife dann jeweils vor den drei Blöcken. 
-            //In erster schleife for all Objects bevor des Index MenüObject One alle Objecte set active false
-
-            Debug.Log("Counter:"+CounterObject);
+        
             if (0 + CounterObject < InventaryObjects.Length)
             {
                 var MenuObjectOne = InventaryObjects[0 + CounterObject];
@@ -171,7 +159,6 @@ public class MenuController : MonoBehaviour
             }
             else
                 CursorArrowRechts.SetActive(false);
-            //GameObject.Find("CursorArrowRechts").SetActive(false);
 
             if (2 + CounterObject < InventaryObjects.Length)
             {
@@ -179,15 +166,13 @@ public class MenuController : MonoBehaviour
                 MenuObjectThree.SetActive(MenuObjectThree);
                 MenuObjectThree.transform.position = new Vector3(4, 0, 9);
             }
-            //else
-                //GameObject.Find("CursorArrowRechts").SetActive(false);
+            else
+                CursorArrowRechts.SetActive(false);
 
         }
 
-        //Die Ursprünglichen drei Objecte obendrüber werden dann False gesetzt
+   
         //Gleiche umgekehrt mit Pfeil zurück
-        //Sobald es nicht nochmal weiter geht dürfen die Pfeile nicht mehr angezeigt werden
-        //Muss noch einen else part geben, wenn nur zwei oder ein Object bei der Zählung übrig bleiben, sodass dann kein Fehler kommt, dass Objekte fehlen. 
 
 
         Debug.Log("Inventar Function");
