@@ -118,11 +118,9 @@ public class MenuController : MonoBehaviour
 
         if (nfcTag.Contains("box") && !newInventoryObjects.Contains(Schatulle))
         {
-            Debug.Log("box");
             newInventoryObjects.Add(Schatulle);
         } else if (nfcTag.Contains("skizzenbuch") && !newInventoryObjects.Contains(skizzenbuch2))
         {
-            Debug.Log("skizzenbuch");
             newInventoryObjects.Add(skizzenbuch2);
         }
         else
