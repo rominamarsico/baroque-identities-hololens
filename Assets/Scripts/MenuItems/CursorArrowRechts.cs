@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class CursorArrowRechts : MonoBehaviour {
     public int ClickRight;
+    public int ObjectCounter;
 
     void OnSelect()
     {
         Debug.Log("Arrow Rechts Clicked");
         ClickRight++;
-        var menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
-        menuController.ObjectCounter = ClickRight*3;
+        ObjectCounter = ClickRight*3;
     }
 }
