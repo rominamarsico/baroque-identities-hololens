@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
-//using Academy.HoloToolkit.Unity; --> Müssen wir noch runterladen
+
 
 public class MenuController : MonoBehaviour
 {
@@ -84,9 +84,7 @@ public class MenuController : MonoBehaviour
         string inventar = wwwInventar.downloadHandler.text;
         string mission = wwwMission.downloadHandler.text;
         string character = wwwCharacter.downloadHandler.text;
-        /*Debug.Log(inventar.Length);
-        Debug.Log(mission.Length);
-        Debug.Log(character.Length);*/
+      
 
         if (inventar.Contains("Inventar"))
         {
@@ -134,38 +132,47 @@ public class MenuController : MonoBehaviour
 
     public void Inventar () {
         Arrows();
-        var ClickCounterRight = GameObject.Find("CursorArrowRechts").GetComponent<CursorArrowRechts>().ClickRight;
-        var CounterObject = GameObject.Find("CursorArrowRechts").GetComponent<CursorArrowRechts>().ObjectCounter;
-        //Debug.Log(ClickCounterRight);
-        //Debug.Log(CounterObject);
+        var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
+        var CounterObject = CursorArrowRechts.GetComponent<CursorArrowRechts>().ObjectCounter;
 
-        for (int i = ClickCounterRight; i <InventaryObjects.Length/3; i++)
+        for (int i = ClickCounterRight; i <=InventaryObjects.Length/3; i++)
         {
+        
+            if (0 + CounterObject < InventaryObjects.Length)
+            {
+                var MenuObjectOne = InventaryObjects[0 + CounterObject];
+                MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
+                MenuObjectOne.SetActive(MenuObjectOne);
+                for (int a = 0; a < 0 + CounterObject; a++)
+                {
+                    InventaryObjects[a].SetActive(false);
+                }
+            }
+            else
+                CursorArrowRechts.SetActive(false);
 
-            //var check = i;
-            Debug.Log(i);
+            if (1 + CounterObject < InventaryObjects.Length)
+            {
+                var MenuObjectTwo = InventaryObjects[1 + CounterObject];
+                MenuObjectTwo.SetActive(MenuObjectTwo);
+                MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
+            }
+            else
+                CursorArrowRechts.SetActive(false);
 
-
-            var MenuObjectOne = InventaryObjects[0 + CounterObject];
-            MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
-            MenuObjectOne.SetActive(true);
-
-            var MenuObjectTwo = InventaryObjects[1 + CounterObject];
-            MenuObjectTwo.SetActive(true);
-            MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
-
-            var MenuObjectThree = InventaryObjects[2 + CounterObject];
-            MenuObjectThree.SetActive(true);
-            MenuObjectThree.transform.position = new Vector3(4, 0, 9);
-
+            if (2 + CounterObject < InventaryObjects.Length)
+            {
+                var MenuObjectThree = InventaryObjects[2 + CounterObject];
+                MenuObjectThree.SetActive(MenuObjectThree);
+                MenuObjectThree.transform.position = new Vector3(4, 0, 9);
+            }
+            else
+                CursorArrowRechts.SetActive(false);
 
         }
-        //void on Select Pfeil rechts evtl 3 for schleifen, die so oft laufen, wie eine ClickCounter ausgeführt wurde. 
-        //Durch die dann den ArrayIndex der drei Objecte + drei zählt. und dann Set Active setzt und dir position setzt. 
-        //Die Ursprünglichen drei Objecte obendrüber werden dann False gesetzt
+
+   
         //Gleiche umgekehrt mit Pfeil zurück
-        //Sobald es nicht nochmal weiter geht dürfen die Pfeile nicht mehr angezeigt werden
-        //Muss noch einen else part geben, wenn nur zwei oder ein Object bei der Zählung übrig bleiben, sodass dann kein Fehler kommt, dass Objekte fehlen. 
 
 
         Debug.Log("Inventar Function");
