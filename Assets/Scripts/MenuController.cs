@@ -6,10 +6,13 @@ using UnityEngine.Networking;
 public class MenuController : MonoBehaviour
 {
     public bool Left = false;
-    public bool right = false; 
-    //Inventar von Beginn an
+    public bool right = false;
     public GameObject CursorArrowRechts;
     public GameObject CursorArrowLinks;
+    public GameObject[] InventaryObjects;
+    public IList<GameObject> newInventoryObjects;
+
+    //Inventar von Beginn an
     public GameObject pinsel;
     public GameObject portraitludwig;
     public GameObject rotehand;
@@ -19,15 +22,24 @@ public class MenuController : MonoBehaviour
     public GameObject windkompass_anim;
     public int ObjectCounter;
 
-    public GameObject[] InventaryObjects = new GameObject[12];
-    public IList<GameObject> newInventoryObjects;
-
-    public GameObject skizzenbuch2;
-    public GameObject Schatulle;
-
     //Inventar Atelier
+    public GameObject skizzenbuch;
+    public GameObject skizze_mit_frau;
+    public GameObject archive;
+    public GameObject Schatulle;
+    public GameObject Brief_August;
+    public GameObject Brief_Februar;
+    public GameObject Brief_Juni;
+    public GameObject Brief_Maerz;
+    public GameObject Brief_Mai_1741;
+    public GameObject Brief_Mai_1754;
+    public GameObject Zettel_am_Kompass;
+    public GameObject zweiDamen;
+    public GameObject Deer_Brosche;
 
     //Inventar Tatort
+    public GameObject Geburtsurkunde;
+    public GameObject Tuch;
 
     // Use this for initialization
     void Start () {
@@ -46,7 +58,6 @@ public class MenuController : MonoBehaviour
         StartCoroutine(GetClickedMenu());
         StartCoroutine(GetNfcTag());
     }
-    //Switch für newInventar stuff add at first position to the Array --> So stimmen unten immer die ersten drei Objekte.
 
     IEnumerator GetClickedMenu()
     {
@@ -84,13 +95,11 @@ public class MenuController : MonoBehaviour
 
         if (inventar.Contains("Inventar"))
         {
-            //Debug.Log("Inventar database text: ");
             Debug.Log(wwwInventar.downloadHandler.text);
             Inventar();
         }
         else if (character.Contains("Character"))
         {
-            //Debug.Log("Character database text: ");
             Debug.Log(wwwCharacter.downloadHandler.text);
             Characters();
             HideInventar();
@@ -118,14 +127,68 @@ public class MenuController : MonoBehaviour
 
         string nfcTag = wwwNfc.downloadHandler.text;
 
-        if (nfcTag.Contains("box") && !newInventoryObjects.Contains(Schatulle))
+        if (nfcTag.Contains("schatulle") && !newInventoryObjects.Contains(Schatulle))
         {
-            Debug.Log("box");
             newInventoryObjects.Add(Schatulle);
-        } else if (nfcTag.Contains("skizzenbuch") && !newInventoryObjects.Contains(skizzenbuch2))
+        }
+        else if (nfcTag.Contains("skizzenbuch") && !newInventoryObjects.Contains(skizzenbuch))
         {
-            Debug.Log("skizzenbuch");
-            newInventoryObjects.Add(skizzenbuch2);
+            newInventoryObjects.Add(skizzenbuch);
+        }
+        else if (nfcTag.Contains("skizzeFrau") && !newInventoryObjects.Contains(skizze_mit_frau))
+        {
+            newInventoryObjects.Add(skizze_mit_frau);
+        } else if (nfcTag.Contains("archive") && !newInventoryObjects.Contains(archive))
+        {
+            newInventoryObjects.Add(archive);
+        }
+        else if (nfcTag.Contains("2damen") && !newInventoryObjects.Contains(zweiDamen))
+        {
+            newInventoryObjects.Add(zweiDamen);
+        }
+        else if (nfcTag.Contains("Deer") && !newInventoryObjects.Contains(Deer_Brosche))
+        {
+            newInventoryObjects.Add(Deer_Brosche);
+        }
+        else if (nfcTag.Contains("tuch") && !newInventoryObjects.Contains(Tuch))
+        {
+            newInventoryObjects.Add(Tuch);
+        }
+        else if (nfcTag.Contains("geburtsurkunde") && !newInventoryObjects.Contains(Geburtsurkunde))
+        {
+            newInventoryObjects.Add(Geburtsurkunde);
+        }
+        else if (nfcTag.Contains("zettelKompass") && !newInventoryObjects.Contains(Zettel_am_Kompass))
+        {
+            newInventoryObjects.Add(Zettel_am_Kompass);
+        }
+        else if (nfcTag.Contains("briefAugust") && !newInventoryObjects.Contains(Brief_August))
+        {
+            newInventoryObjects.Add(Brief_August);
+        }
+        else if (nfcTag.Contains("briefFebruar") && !newInventoryObjects.Contains(Brief_Februar))
+        {
+            newInventoryObjects.Add(Brief_Februar);
+        }
+        else if (nfcTag.Contains("briefJuni") && !newInventoryObjects.Contains(Brief_Juni))
+        {
+            newInventoryObjects.Add(Brief_Juni);
+        }
+        else if (nfcTag.Contains("briefMaerz") && !newInventoryObjects.Contains(Brief_Maerz))
+        {
+            newInventoryObjects.Add(Brief_Maerz);
+        }
+        else if (nfcTag.Contains("briefMai1741") && !newInventoryObjects.Contains(Brief_Mai_1741))
+        {
+            newInventoryObjects.Add(Brief_Mai_1741);
+        }
+        else if (nfcTag.Contains("skizzeFrau") && !newInventoryObjects.Contains(skizze_mit_frau))
+        {
+            newInventoryObjects.Add(skizze_mit_frau);
+        }
+        else if (nfcTag.Contains("briefMai1754") && !newInventoryObjects.Contains(Brief_Mai_1754))
+        {
+            newInventoryObjects.Add(Brief_Mai_1754);
         }
         else
         {
@@ -152,16 +215,15 @@ public class MenuController : MonoBehaviour
         else
             CursorArrowLinks.SetActive(true);
 
-        if (ClickCounter <= newInventoryObjects.Count/3-1)
+        if (ObjectCounter+3 == newInventoryObjects.Count || ObjectCounter == newInventoryObjects.Count - 1 || ObjectCounter == newInventoryObjects.Count - 2)
         {
-            CursorArrowRechts.SetActive(true);
+            CursorArrowRechts.SetActive(false);
         }
         else
-            CursorArrowRechts.SetActive(false);
+            CursorArrowRechts.SetActive(true);
 
         for (int i = ClickCounter; i <=newInventoryObjects.Count/3; i++)
         {
-            Debug.Log("ObjectCounter" + ObjectCounter);
             if (0 + ObjectCounter < newInventoryObjects.Count)
             {
                 var MenuObjectOne = newInventoryObjects[0 + ObjectCounter];
@@ -184,16 +246,13 @@ public class MenuController : MonoBehaviour
                     }
                 }
             }
-           
 
             if (1 + ObjectCounter < newInventoryObjects.Count)
             {
                 var MenuObjectTwo = newInventoryObjects[1 + ObjectCounter];
                 MenuObjectTwo.SetActive(MenuObjectTwo);
                 MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
-
             }
-           
 
             if (2 + ObjectCounter < newInventoryObjects.Count)
             {
@@ -201,16 +260,12 @@ public class MenuController : MonoBehaviour
                 MenuObjectThree.SetActive(MenuObjectThree);
                 MenuObjectThree.transform.position = new Vector3(2, 0, 9);
             }
-
         }
-        //Gleiche umgekehrt mit Pfeil zurück
-
-        Debug.Log("Inventar Function");
     }
 
     public void HideInventar()
     {
-        foreach (GameObject _gameObject in InventaryObjects)
+        foreach (GameObject _gameObject in newInventoryObjects)
         {
             _gameObject.SetActive(false);
         }
