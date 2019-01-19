@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
 
+
 public class MenuController : MonoBehaviour
 {
+
     //Inventar von Beginn an
     public GameObject CursorArrowRechts;
     public GameObject CursorArrowLinks;
@@ -15,38 +17,45 @@ public class MenuController : MonoBehaviour
     public GameObject gun_KvP;
     public GameObject gun_LvH;
     public GameObject windkompass_anim;
-    public int counter;
+    public int ObjectCounter;
 
-    public GameObject[] InventaryObjects = new GameObject[12];
-    IList<GameObject> newInventoryObjects;
+    public GameObject[] InventaryObjects;
 
-    public GameObject skizzenbuch2;
-    public GameObject Schatulle;
 
     //Inventar Atelier
 
     //Inventar Tatort
 
+    public void HideInventar(){
+        foreach (GameObject _gameObject in InventaryObjects)
+        {
+            gameObject.SetActive(false);
+
+        }
+
+    }
     // Use this for initialization
     void Start () {
-        InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
-        newInventoryObjects = new List<GameObject>(InventaryObjects);
 
-        for (int i = 0; i < InventaryObjects.Length; i++)
+        InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
+
+        for (int i = 0; i <=InventaryObjects.Length; i++)
         {
             Debug.Log("Inventar Number " + i + " is named " + InventaryObjects[i].name);
+
         }
+
         Debug.Log(InventaryObjects.Length);
     }
 
     void Update()
     {
-        StartCoroutine(GetClickedMenu());
-        StartCoroutine(GetNfcTag());
-    }
-    //Switch für newInventar stuff add at first position to the Array --> So stimmen unten immer die ersten drei Objekte.
+        StartCoroutine(GetText());
 
-    IEnumerator GetClickedMenu()
+    }
+    //Switch für newInventar stuff add at first position to the Array --> So stimmen Unten immer die ersten drei Objekte.
+
+    IEnumerator GetText()
     {
         UnityWebRequest wwwInventar = new UnityWebRequest("https://baroque-identities.firebaseio.com/Inventar/val/.json?print=pretty/");
         wwwInventar.downloadHandler = new DownloadHandlerBuffer();
@@ -80,41 +89,42 @@ public class MenuController : MonoBehaviour
         string mission = wwwMission.downloadHandler.text;
         string character = wwwCharacter.downloadHandler.text;
 
+
         if (inventar.Contains("Inventar"))
         {
+            // Show results as text
             //Debug.Log("Inventar database text: ");
             Debug.Log(wwwInventar.downloadHandler.text);
+
+            // Or retrieve results as binary data
+            //byte[] results = wwwInventar.downloadHandler.data;
             Inventar();
         }
-        else if (character.Contains("Character"))
+        else if (character.Contains("Character")) // character.Length == 12
         {
+            // Show results as text
             //Debug.Log("Character database text: ");
             Debug.Log(wwwCharacter.downloadHandler.text);
+
+            // Or retrieve results as binary data
+            //byte[] results = wwwCharacter.downloadHandler.data;
             Characters();
-            HideInventar();
         }
-        else if (mission.Contains("Mission"))
+        else if (mission.Contains("Mission")) // mission.Length == 10
         {
+            // Show results as text
             //Debug.Log("Mission database text: ");
             Debug.Log(wwwMission.downloadHandler.text);
+
+            // Or retrieve results as binary data
+            //byte[] results = wwwMission.downloadHandler.data;
             Mission();
-            HideInventar();
         }
         else
         {
             Debug.Log("No menu controller is triggert.");
             HideInventar();
         }
-    }
-
-    IEnumerator GetNfcTag ()
-    {
-        UnityWebRequest wwwNfc = new UnityWebRequest("https://baroque-identities.firebaseio.com/nfcTag/val/.json?print=pretty/");
-        wwwNfc.downloadHandler = new DownloadHandlerBuffer();
-        wwwNfc.chunkedTransfer = false;
-        yield return wwwNfc.SendWebRequest();
-
-        string nfcTag = wwwNfc.downloadHandler.text;
 
         if (nfcTag.Contains("box") && !newInventoryObjects.Contains(Schatulle))
         {
@@ -133,57 +143,59 @@ public class MenuController : MonoBehaviour
     {
         CursorArrowRechts.transform.position = new Vector3(2, -2, 9);
         CursorArrowLinks.transform.position = new Vector3(-2, -2, 9);
+
     }
 
     public void Inventar () {
         Arrows();
         var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
-        var CounterObject = CursorArrowRechts.GetComponent<CursorArrowRechts>().ObjectCounter;
+        var ClickCounterLeft = CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft;
 
-        for (int i = ClickCounterRight; i <=newInventoryObjects.Count/3; i++)
+        Debug.Log(ClickCounterRight);
+        if(ClickCounterRight==0){
+            CursorArrowLinks.SetActive(false);
+        }
+        else
+            CursorArrowLinks.SetActive(true);
+
+        for (int i = ClickCounterRight; i <= InventaryObjects.Length / 3; i++)
         {
-            if (0 + CounterObject < newInventoryObjects.Count)
+
+            if (0 + ObjectCounter < InventaryObjects.Length)
             {
-                var MenuObjectOne = newInventoryObjects[0 + CounterObject];
+                var MenuObjectOne = InventaryObjects[0 + ObjectCounter];
                 MenuObjectOne.transform.position = new Vector3(-2, 0, 9);
                 MenuObjectOne.SetActive(MenuObjectOne);
-                for (int a = 0; a < 0 + CounterObject; a++)
+                for (int a = 0; a < 0 + ObjectCounter; a++)
                 {
-                    newInventoryObjects[a].SetActive(false);
+                    InventaryObjects[a].SetActive(false);
                 }
             }
             else
                 CursorArrowRechts.SetActive(false);
 
-            if (1 + CounterObject < newInventoryObjects.Count)
+            if (1 + ObjectCounter < InventaryObjects.Length)
             {
-                var MenuObjectTwo = newInventoryObjects[1 + CounterObject];
+                var MenuObjectTwo = InventaryObjects[1 + ObjectCounter];
                 MenuObjectTwo.SetActive(MenuObjectTwo);
                 MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
             }
             else
                 CursorArrowRechts.SetActive(false);
 
-            if (2 + CounterObject < newInventoryObjects.Count)
+            if (2 + ObjectCounter < InventaryObjects.Length)
             {
-                var MenuObjectThree = newInventoryObjects[2 + CounterObject];
+                var MenuObjectThree = InventaryObjects[2 + ObjectCounter];
                 MenuObjectThree.SetActive(MenuObjectThree);
                 MenuObjectThree.transform.position = new Vector3(2, 0, 9);
             }
             else
                 CursorArrowRechts.SetActive(false);
+
         }
-        //Gleiche umgekehrt mit Pfeil zurück
+       //Gleiche umgekehrt mit Pfeil zurück
 
         Debug.Log("Inventar Function");
-    }
-
-    public void HideInventar()
-    {
-        foreach (GameObject _gameObject in InventaryObjects)
-        {
-            _gameObject.SetActive(false);
-        }
     }
 
     public void SelectPortraitLudwig()
