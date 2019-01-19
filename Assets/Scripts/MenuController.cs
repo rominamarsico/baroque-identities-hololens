@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Networking;
 
 
@@ -16,10 +17,11 @@ public class MenuController : MonoBehaviour
     public GameObject gun_KvP;
     public GameObject gun_LvH;
     public GameObject windkompass_anim;
-    public int counter;
+    public int ObjectCounter;
 
     public GameObject[] InventaryObjects;
 
+   
     //Inventar Atelier
 
     //Inventar Tatort
@@ -28,15 +30,16 @@ public class MenuController : MonoBehaviour
         foreach (GameObject _gameObject in InventaryObjects)
         {
             gameObject.SetActive(false);
+
         }
+
     }
     // Use this for initialization
     void Start () {
 
-
         InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
-
-        for (int i = 0; i < InventaryObjects.Length; i++)
+     
+        for (int i = 0; i <=InventaryObjects.Length; i++)
         {
             Debug.Log("Inventar Number " + i + " is named " + InventaryObjects[i].name);
 
@@ -48,6 +51,7 @@ public class MenuController : MonoBehaviour
     void Update()
     {
         StartCoroutine(GetText());
+
     }
     //Switch für newInventar stuff add at first position to the Array --> So stimmen Unten immer die ersten drei Objekte.
 
@@ -128,22 +132,30 @@ public class MenuController : MonoBehaviour
     {
         CursorArrowRechts.transform.position = new Vector3(2, -2, 9);
         CursorArrowLinks.transform.position = new Vector3(-2, -2, 9);
+
     }
 
     public void Inventar () {
         Arrows();
         var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
-        var CounterObject = CursorArrowRechts.GetComponent<CursorArrowRechts>().ObjectCounter;
+        var ClickCounterLeft = CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft;
 
-        for (int i = ClickCounterRight; i <=InventaryObjects.Length/3; i++)
+        Debug.Log(ClickCounterRight);
+        if(ClickCounterRight==0){
+            CursorArrowLinks.SetActive(false);
+        }
+        else
+            CursorArrowLinks.SetActive(true);
+
+        for (int i = ClickCounterRight; i <= InventaryObjects.Length / 3; i++)
         {
-        
-            if (0 + CounterObject < InventaryObjects.Length)
+
+            if (0 + ObjectCounter < InventaryObjects.Length)
             {
-                var MenuObjectOne = InventaryObjects[0 + CounterObject];
+                var MenuObjectOne = InventaryObjects[0 + ObjectCounter];
                 MenuObjectOne.transform.position = new Vector3(-2, 0, 9);
                 MenuObjectOne.SetActive(MenuObjectOne);
-                for (int a = 0; a < 0 + CounterObject; a++)
+                for (int a = 0; a < 0 + ObjectCounter; a++)
                 {
                     InventaryObjects[a].SetActive(false);
                 }
@@ -151,18 +163,18 @@ public class MenuController : MonoBehaviour
             else
                 CursorArrowRechts.SetActive(false);
 
-            if (1 + CounterObject < InventaryObjects.Length)
+            if (1 + ObjectCounter < InventaryObjects.Length)
             {
-                var MenuObjectTwo = InventaryObjects[1 + CounterObject];
+                var MenuObjectTwo = InventaryObjects[1 + ObjectCounter];
                 MenuObjectTwo.SetActive(MenuObjectTwo);
                 MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
             }
             else
                 CursorArrowRechts.SetActive(false);
 
-            if (2 + CounterObject < InventaryObjects.Length)
+            if (2 + ObjectCounter < InventaryObjects.Length)
             {
-                var MenuObjectThree = InventaryObjects[2 + CounterObject];
+                var MenuObjectThree = InventaryObjects[2 + ObjectCounter];
                 MenuObjectThree.SetActive(MenuObjectThree);
                 MenuObjectThree.transform.position = new Vector3(2, 0, 9);
             }
@@ -170,10 +182,7 @@ public class MenuController : MonoBehaviour
                 CursorArrowRechts.SetActive(false);
 
         }
-
-   
-        //Gleiche umgekehrt mit Pfeil zurück
-
+       //Gleiche umgekehrt mit Pfeil zurück
 
         Debug.Log("Inventar Function");
     }
