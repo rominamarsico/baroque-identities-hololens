@@ -53,17 +53,17 @@ public class MenuController : MonoBehaviour
 
     IEnumerator GetText()
     {
-        UnityWebRequest wwwInventar = new UnityWebRequest("https://baroque-identities.firebaseio.com/Inventar/val/.json?print=pretty");
+        UnityWebRequest wwwInventar = new UnityWebRequest("https://baroque-identities.firebaseio.com/Inventar/val/.json?print=pretty/");
         wwwInventar.downloadHandler = new DownloadHandlerBuffer();
         wwwInventar.chunkedTransfer = false;
         yield return wwwInventar.SendWebRequest();
 
-        UnityWebRequest wwwCharacter = new UnityWebRequest("https://baroque-identities.firebaseio.com/Character/val/.json?print=pretty");
+        UnityWebRequest wwwCharacter = new UnityWebRequest("https://baroque-identities.firebaseio.com/Character/val/.json?print=pretty/");
         wwwCharacter.downloadHandler = new DownloadHandlerBuffer();
         wwwCharacter.chunkedTransfer = false;
         yield return wwwCharacter.SendWebRequest();
 
-        UnityWebRequest wwwMission = new UnityWebRequest("https://baroque-identities.firebaseio.com/Mission/val/.json?print=pretty");
+        UnityWebRequest wwwMission = new UnityWebRequest("https://baroque-identities.firebaseio.com/Mission/val/.json?print=pretty/");
         wwwMission.downloadHandler = new DownloadHandlerBuffer();
         wwwMission.chunkedTransfer = false;
         yield return wwwMission.SendWebRequest();
