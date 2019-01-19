@@ -51,12 +51,22 @@ public class MenuController : MonoBehaviour
             Debug.Log("Inventar Number " + i + " is named " + InventaryObjects[i].name);
         }
         Debug.Log(InventaryObjects.Length);
+
+        ClearNfcInput();
     }
 
     void Update()
     {
         StartCoroutine(GetClickedMenu());
         StartCoroutine(GetNfcTag());
+    }
+
+    IEnumerator ClearNfcInput ()
+    {
+        UnityWebRequest wwwClearNfcInput = new UnityWebRequest("https://us-central1-baroque-identities.cloudfunctions.net/addMessage?text=");
+        wwwClearNfcInput.downloadHandler = new DownloadHandlerBuffer();
+        wwwClearNfcInput.chunkedTransfer = false;
+        yield return wwwClearNfcInput.SendWebRequest();
     }
 
     IEnumerator GetClickedMenu()
@@ -202,6 +212,12 @@ public class MenuController : MonoBehaviour
         CursorArrowLinks.transform.position = new Vector3(-2, -2, 9);
     }
 
+    public void HideArrows ()
+    {
+        CursorArrowRechts.SetActive(false);
+        CursorArrowLinks.SetActive(false);
+    }
+
     public void Inventar () {
         Arrows();
         var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
@@ -265,6 +281,7 @@ public class MenuController : MonoBehaviour
 
     public void HideInventar()
     {
+        HideArrows();
         foreach (GameObject _gameObject in newInventoryObjects)
         {
             _gameObject.SetActive(false);
