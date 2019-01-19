@@ -15,7 +15,7 @@ public class MenuController : MonoBehaviour
     public GameObject gun_KvP;
     public GameObject gun_LvH;
     public GameObject windkompass_anim;
-    public int counter;
+    public int ObjectCounter;
 
     public GameObject[] InventaryObjects = new GameObject[12];
     IList<GameObject> newInventoryObjects;
@@ -140,16 +140,24 @@ public class MenuController : MonoBehaviour
     public void Inventar () {
         Arrows();
         var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
-        var CounterObject = CursorArrowRechts.GetComponent<CursorArrowRechts>().ObjectCounter;
-
-        for (int i = ClickCounterRight; i <=newInventoryObjects.Count/3; i++)
+        var ClickCounterLeft = CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft;
+        var ClickCounter = ClickCounterRight - ClickCounterLeft;
+        Debug.Log(ClickCounterRight);
+        if (ClickCounterRight == 0)
         {
-            if (0 + CounterObject < newInventoryObjects.Count)
+            CursorArrowLinks.SetActive(false);
+        }
+        else
+            CursorArrowLinks.SetActive(true);
+
+        for (int i = ClickCounter; i <=newInventoryObjects.Count/3; i++)
+        {
+            if (0 + ObjectCounter < newInventoryObjects.Count)
             {
-                var MenuObjectOne = newInventoryObjects[0 + CounterObject];
+                var MenuObjectOne = newInventoryObjects[0 + ObjectCounter];
                 MenuObjectOne.transform.position = new Vector3(-2, 0, 9);
                 MenuObjectOne.SetActive(MenuObjectOne);
-                for (int a = 0; a < 0 + CounterObject; a++)
+                for (int a = 0; a < 0 + ObjectCounter; a++)
                 {
                     newInventoryObjects[a].SetActive(false);
                 }
@@ -157,18 +165,18 @@ public class MenuController : MonoBehaviour
             else
                 CursorArrowRechts.SetActive(false);
 
-            if (1 + CounterObject < newInventoryObjects.Count)
+            if (1 + ObjectCounter < newInventoryObjects.Count)
             {
-                var MenuObjectTwo = newInventoryObjects[1 + CounterObject];
+                var MenuObjectTwo = newInventoryObjects[1 + ObjectCounter];
                 MenuObjectTwo.SetActive(MenuObjectTwo);
                 MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
             }
             else
                 CursorArrowRechts.SetActive(false);
 
-            if (2 + CounterObject < newInventoryObjects.Count)
+            if (2 + ObjectCounter < newInventoryObjects.Count)
             {
-                var MenuObjectThree = newInventoryObjects[2 + CounterObject];
+                var MenuObjectThree = newInventoryObjects[2 + ObjectCounter];
                 MenuObjectThree.SetActive(MenuObjectThree);
                 MenuObjectThree.transform.position = new Vector3(2, 0, 9);
             }

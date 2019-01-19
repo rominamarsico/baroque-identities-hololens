@@ -10,6 +10,7 @@ public class CursorArrowRechts : MonoBehaviour {
     {
         Debug.Log("Arrow Rechts Clicked");
         ClickRight++;
-        ObjectCounter = ClickRight*3;
+        var menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
+        menuController.ObjectCounter = ClickRight * 3;
     }
 }
