@@ -126,8 +126,8 @@ public class MenuController : MonoBehaviour
 
     public void Arrows ()
     {
-        CursorArrowRechts.transform.position = new Vector3(8, 0, 9);
-        CursorArrowLinks.transform.position = new Vector3(-8, 0, 9);
+        CursorArrowRechts.transform.position = new Vector3(2, -2, 9);
+        CursorArrowLinks.transform.position = new Vector3(-2, -2, 9);
     }
 
     public void Inventar () {
@@ -141,7 +141,7 @@ public class MenuController : MonoBehaviour
             if (0 + CounterObject < InventaryObjects.Length)
             {
                 var MenuObjectOne = InventaryObjects[0 + CounterObject];
-                MenuObjectOne.transform.position = new Vector3(-4, 0, 9);
+                MenuObjectOne.transform.position = new Vector3(-2, 0, 9);
                 MenuObjectOne.SetActive(MenuObjectOne);
                 for (int a = 0; a < 0 + CounterObject; a++)
                 {
@@ -164,7 +164,7 @@ public class MenuController : MonoBehaviour
             {
                 var MenuObjectThree = InventaryObjects[2 + CounterObject];
                 MenuObjectThree.SetActive(MenuObjectThree);
-                MenuObjectThree.transform.position = new Vector3(4, 0, 9);
+                MenuObjectThree.transform.position = new Vector3(2, 0, 9);
             }
             else
                 CursorArrowRechts.SetActive(false);
