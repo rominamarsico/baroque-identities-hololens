@@ -875,30 +875,47 @@ MonoBehaviour:
   Deer_Brosche: {fileID: 1900706281}
   Geburtsurkunde: {fileID: 225814702}
   Tuch: {fileID: 450675706}
-  Panel: {fileID: 0}
-  PortraitLudwigText: {fileID: 0}
-  PinselText: {fileID: 0}
-  RoteHandText: {fileID: 0}
-  GunHvGText: {fileID: 0}
-  GunKvPText: {fileID: 0}
-  GunLvHText: {fileID: 0}
-  WindkompassText: {fileID: 0}
-  SkizzenbuchText: {fileID: 0}
-  SkizzeMitFrauText: {fileID: 0}
-  ArchiveText: {fileID: 0}
-  BriefAugustText: {fileID: 0}
-  SchatulleText: {fileID: 0}
-  BriefFebruarText: {fileID: 0}
-  BriefMai1741Text: {fileID: 0}
-  BriefMai1754Text: {fileID: 0}
-  BriefMaerzText: {fileID: 0}
-  ZettelAmKompassText: {fileID: 0}
-  ZweiDamenText: {fileID: 0}
-  KugelText: {fileID: 0}
-  BriefJuniText: {fileID: 0}
-  TuchText: {fileID: 0}
-  GeburtsurkundeText: {fileID: 0}
-  DeerBroscheText: {fileID: 0}
+  Panel: {fileID: 1489844635379312, guid: 437ace6939672421d878747c0159887f, type: 2}
+  PortraitLudwigText: {fileID: 1843215702845174, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  PinselText: {fileID: 1325419820009656, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
+  RoteHandText: {fileID: 1654610680030868, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  GunHvGText: {fileID: 1046751410354396, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
+  GunKvPText: {fileID: 1630942682488386, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
+  GunLvHText: {fileID: 1477612063760752, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
+  WindkompassText: {fileID: 1756354177823208, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  SkizzenbuchText: {fileID: 1143934158041856, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  SkizzeMitFrauText: {fileID: 1821671333998348, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  ArchiveText: {fileID: 1556242970353986, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  BriefAugustText: {fileID: 1103640235891046, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  SchatulleText: {fileID: 1691249728877142, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  BriefFebruarText: {fileID: 1847515660092830, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  BriefMai1741Text: {fileID: 1730583658071000, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  BriefMai1754Text: {fileID: 1960094773495020, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  BriefMaerzText: {fileID: 1848346781192904, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  ZettelAmKompassText: {fileID: 1629087739005782, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  ZweiDamenText: {fileID: 1227972234450000, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  KugelText: {fileID: 1091811223459498, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
+  BriefJuniText: {fileID: 1643072156449608, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  TuchText: {fileID: 1986522912541152, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
+  GeburtsurkundeText: {fileID: 1578446617768128, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
+  DeerBroscheText: {fileID: 1622545785902528, guid: 7fe1d95e1175c477d952166a36671230,
+    type: 2}
 --- !u!4 &427454138
 Transform:
   m_ObjectHideFlags: 0
