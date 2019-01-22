@@ -8,7 +8,7 @@ public class CursorArrowRechts : MonoBehaviour {
 
     void OnSelect()
     {
-        Debug.Log("Arrow Rechts Clicked");
+        //Debug.Log("Arrow Rechts Clicked");
         ClickRight++;
         var menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
         menuController.Left = false;
