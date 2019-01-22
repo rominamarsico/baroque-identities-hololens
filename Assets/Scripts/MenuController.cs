@@ -84,7 +84,7 @@ public class MenuController : MonoBehaviour
             //Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
         }
 
-        ClearNfcInput();
+        StartCoroutine(ClearNfcInput());
         HideText();
     }
 
@@ -94,7 +94,7 @@ public class MenuController : MonoBehaviour
         StartCoroutine(GetNfcTag());
     }
 
-    IEnumerator ClearNfcInput ()
+    IEnumerator ClearNfcInput()
     {
         UnityWebRequest wwwClearNfcInput = new UnityWebRequest("https://us-central1-baroque-identities.cloudfunctions.net/addMessage?text=");
         wwwClearNfcInput.downloadHandler = new DownloadHandlerBuffer();
@@ -246,8 +246,8 @@ public class MenuController : MonoBehaviour
 
     public void Arrows ()
     {
-        CursorArrowRechts.transform.position = new Vector3(2, -2, 9);
-        CursorArrowLinks.transform.position = new Vector3(-2, -2, 9);
+        CursorArrowRechts.transform.position = new Vector3(1, -1, 9);
+        CursorArrowLinks.transform.position = new Vector3(-1, -1, 9);
     }
 
     public void HideArrows ()
@@ -294,7 +294,7 @@ public class MenuController : MonoBehaviour
             if (0 + ObjectCounter < newInventoryObjects.Count)
             {
                 var MenuObjectOne = newInventoryObjects[0 + ObjectCounter];
-                MenuObjectOne.transform.position = new Vector3(-2, 0, 9);
+                MenuObjectOne.transform.position = new Vector3(-1, 0, 9);
                 MenuObjectOne.SetActive(MenuObjectOne);
                 if (right == true)
                 {
@@ -325,7 +325,7 @@ public class MenuController : MonoBehaviour
             {
                 var MenuObjectThree = newInventoryObjects[2 + ObjectCounter];
                 MenuObjectThree.SetActive(MenuObjectThree);
-                MenuObjectThree.transform.position = new Vector3(2, 0, 9);
+                MenuObjectThree.transform.position = new Vector3(1, 0, 9);
             }
         }
     }
