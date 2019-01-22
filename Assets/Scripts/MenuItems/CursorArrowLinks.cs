@@ -7,21 +7,21 @@ public class CursorArrowLinks : MonoBehaviour {
     public int ClickLeft;
     public int ObjectCounter;
 
+    public AudioSource click;
 
     void OnSelect()
     {
+        click.Play();
 
-        Debug.Log("Arrow Links Clicked");
+        //Debug.Log("Arrow Links Clicked");
         ClickLeft++;
         var menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
         menuController.Left = true;
        
-        Debug.Log(menuController.Left);
+        //Debug.Log(menuController.Left);
         if (menuController.ObjectCounter >= 1)
         {
             menuController.ObjectCounter = menuController.ObjectCounter - 3;
-
         }
-
     }
 }

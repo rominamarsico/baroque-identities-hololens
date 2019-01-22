@@ -16,7 +16,6 @@ public class MenuController : MonoBehaviour
 
     public AudioSource menu;
     public AudioSource scan;
-    public AudioSource click;
 
     //Inventar von Beginn an
     public GameObject pinsel;
@@ -26,6 +25,7 @@ public class MenuController : MonoBehaviour
     public GameObject gun_KvP;
     public GameObject gun_LvH;
     public GameObject windkompass_anim;
+
     public int ObjectCounter;
 
     //Inventar Atelier
@@ -81,11 +81,10 @@ public class MenuController : MonoBehaviour
 
         for (int i = 0; i <TextObjects.Count; i++)
         {
-            Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
+            //Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
         }
 
         ClearNfcInput();
-
         HideText();
     }
 
@@ -136,6 +135,11 @@ public class MenuController : MonoBehaviour
         string inventar = wwwInventar.downloadHandler.text;
         string mission = wwwMission.downloadHandler.text;
         string character = wwwCharacter.downloadHandler.text;
+
+        if (inventar.Contains("Inventar") || character.Contains("Character") || mission.Contains("Mission"))
+        {
+            //menu.Play();
+        }
 
         if (inventar.Contains("Inventar"))
         {
@@ -257,8 +261,8 @@ public class MenuController : MonoBehaviour
         {
             Inventar();
         }
-        else
-            Debug.Log("IsInventar is false");
+        //else
+            //Debug.Log("IsInventar is false");
     }
     public void TrueInventar(){
         IsInventar = true;
@@ -270,7 +274,7 @@ public class MenuController : MonoBehaviour
         var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
         var ClickCounterLeft = CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft;
         var ClickCounter = ClickCounterRight - ClickCounterLeft;
-        Debug.Log(ClickCounterRight);
+        //Debug.Log(ClickCounterRight);
         if (ObjectCounter == 0)
         {
             CursorArrowLinks.SetActive(false);
@@ -297,13 +301,13 @@ public class MenuController : MonoBehaviour
                     for (int a = 0; a < 0 + ObjectCounter; a++)
                     {
                         newInventoryObjects[a].SetActive(false);
-                        Debug.Log("Righta:" + a);
+                        //Debug.Log("Righta:" + a);
                     }
                 }
                 if (Left==true){
                     for (int a = 0+newInventoryObjects.Count-1; a > ObjectCounter; a--)
                     {
-                        Debug.Log("Left:" + a);
+                        //Debug.Log("Left:" + a);
                         newInventoryObjects[a].SetActive(false);
 
                     }
@@ -326,7 +330,6 @@ public class MenuController : MonoBehaviour
         }
     }
 
-
     public void HideInventar()
     {
         HideArrows();
@@ -334,10 +337,10 @@ public class MenuController : MonoBehaviour
         {
             _gameObject.SetActive(false);
         }
-
     }
 
-    public void HideText(){
+    public void HideText()
+    {
         foreach (GameObject _text in TextObjects)
         {
             _text.SetActive(false);
@@ -345,221 +348,114 @@ public class MenuController : MonoBehaviour
         Panel.SetActive(false);
     }
 
+    public void OnInventoryItemClick(GameObject inventoryItem, GameObject inventoryItemText)
+    {
+        IsInventar = false;
+        HideInventar();
+        Panel.SetActive(true);
+        inventoryItem.transform.position = new Vector3(-2, 0, 9);
+        inventoryItem.SetActive(true);
+        inventoryItemText.SetActive(true);
+    }
+
     public void SelectPortraitLudwig()
     {
-        IsInventar = false;
-        HideInventar();
-        portraitludwig.transform.position = new Vector3(-2, 0, 9);
-        portraitludwig.SetActive(true);
-        Panel.SetActive(true);
-        PortraitLudwigText.SetActive(true);
+        OnInventoryItemClick(portraitludwig, PortraitLudwigText);
     }
-
     public void SelectPinsel()
     {
-        IsInventar = false;
-        HideInventar();
-        pinsel.transform.position = new Vector3(-2, 0, 9);
-        pinsel.SetActive(true);
-        Panel.SetActive(true);
-        PinselText.SetActive(true);
+        OnInventoryItemClick(pinsel, PinselText);
     }
-
     public void SelectRoteHand()
     {
-        IsInventar = false;
-        HideInventar();
-        rotehand.transform.position = new Vector3(-2, 0, 9);
-        rotehand.SetActive(true);
-        Panel.SetActive(true);
-        RoteHandText.SetActive(true);
+        OnInventoryItemClick(rotehand, RoteHandText);
     }
     public void SelectGunHvG()
     {
-        IsInventar = false;
-        HideInventar();
-        gun_HvG.transform.position = new Vector3(-2, 0, 9);
-        gun_HvG.SetActive(true);
-        Panel.SetActive(true);
-        GunHvGText.SetActive(true);
+        OnInventoryItemClick(gun_HvG, GunHvGText);
     }
     public void SelectGunKvP()
     {
-        IsInventar = false;
-        HideInventar();
-        gun_KvP.transform.position = new Vector3(-2, 0, 9);
-        gun_KvP.SetActive(true);
-        Panel.SetActive(true);
-        GunKvPText.SetActive(true);
+        OnInventoryItemClick(gun_HvG, GunKvPText);
     }
     public void SelectGunLvH()
     {
-        IsInventar = false;
-        HideInventar();
-        gun_LvH.transform.position = new Vector3(-2, 0, 9);
-        gun_LvH.SetActive(true);
-        Panel.SetActive(true);
-        GunLvHText.SetActive(true);
+        OnInventoryItemClick(gun_LvH, GunLvHText);
     }
     public void SelectWindcompass()
     {
-        IsInventar = false;
-        HideInventar();
-        windkompass_anim.transform.position = new Vector3(-2, 0, 9);
-        windkompass_anim.SetActive(true);
-        Panel.SetActive(true);
-        WindkompassText.SetActive(true);
+        OnInventoryItemClick(windkompass_anim, WindkompassText);
     }
     public void SelectSkizzenbuch()
     {
-        IsInventar = false;
-        HideInventar();
-        skizzenbuch.transform.position = new Vector3(-2, 0, 9);
-        skizzenbuch.SetActive(true);
-        Panel.SetActive(true);
-        SkizzenbuchText.SetActive(true);
+        OnInventoryItemClick(skizzenbuch, SkizzenbuchText);
     }
     public void SelectSchatulle()
     {
-        IsInventar = false;
-        HideInventar();
-        Schatulle.transform.position = new Vector3(-2, 0, 9);
-        Schatulle.SetActive(true);
-        Panel.SetActive(true);
-        SchatulleText.SetActive(true);
+        OnInventoryItemClick(Schatulle, SchatulleText);
     }
     public void SelectArchive()
     {
-        IsInventar = false;
-        HideInventar();
-        archive.transform.position = new Vector3(-2, 0, 9);
-        archive.SetActive(true);
-        Panel.SetActive(true);
-        ArchiveText.SetActive(true);
+        OnInventoryItemClick(archive, ArchiveText);
     }
     public void SelectZweiDamen()
     {
-        IsInventar = false;
-        HideInventar();
-        zweiDamen.transform.position = new Vector3(-2, 0, 9);
-        zweiDamen.SetActive(true);
-        Panel.SetActive(true);
-        ZweiDamenText.SetActive(true);
+        OnInventoryItemClick(zweiDamen, ZweiDamenText);
     }
     public void SelectBriefAugust()
     {
-        IsInventar = false;
-        HideInventar();
-        Brief_August.transform.position = new Vector3(-2, 0, 9);
-        Brief_August.SetActive(true);
-        Panel.SetActive(true);
-        BriefAugustText.SetActive(true);
+        OnInventoryItemClick(Brief_August, BriefAugustText);
     }
     public void SelectBriefFebruar()
     {
-        IsInventar = false;
-        HideInventar();
-        Brief_Februar.transform.position = new Vector3(-2, 0, 9);
-        Brief_Februar.SetActive(true);
-        Panel.SetActive(true);
-        BriefFebruarText.SetActive(true);
+        OnInventoryItemClick(Brief_Februar, BriefFebruarText);
     }
     public void SelectBriefJuni()
     {
-        IsInventar = false;
-        HideInventar();
-        Brief_Juni.transform.position = new Vector3(-2, 0, 9);
-        Brief_Juni.SetActive(true);
-        Panel.SetActive(true);
-        BriefJuniText.SetActive(true);
+        OnInventoryItemClick(Brief_Juni, BriefJuniText);
     }
     public void SelectBriefMaerz()
     {
-        IsInventar = false;
-        HideInventar();
-        Brief_Maerz.transform.position = new Vector3(-2, 0, 9);
-        Brief_Maerz.SetActive(true);
-        Panel.SetActive(true);
-        BriefMaerzText.SetActive(true);
+        OnInventoryItemClick(Brief_Maerz, BriefMaerzText);
     }
     public void SelectBriefMai1741()
     {
-        IsInventar = false;
-        HideInventar();
-        Brief_Mai_1741.transform.position = new Vector3(-2, 0, 9);
-        Brief_Mai_1741.SetActive(true);
-        Panel.SetActive(true);
-        BriefMai1741Text.SetActive(true);
+        OnInventoryItemClick(Brief_Mai_1741, BriefMai1741Text);
     }
     public void SelectBriefMai1754()
     {
-        IsInventar = false;
-        HideInventar();
-        Brief_Mai_1741.transform.position = new Vector3(-2, 0, 9);
-        Brief_Mai_1741.SetActive(true);
-        Panel.SetActive(true);
-        BriefMai1741Text.SetActive(true);
+        OnInventoryItemClick(Brief_Mai_1754, BriefMai1754Text);
     }
     public void SelectDeerBrosche()
     {
-        IsInventar = false;
-        HideInventar();
-        Deer_Brosche.transform.position = new Vector3(-2, 0, 9);
-        Deer_Brosche.SetActive(true);
-        Panel.SetActive(true);
-        DeerBroscheText.SetActive(true);
+        OnInventoryItemClick(Deer_Brosche, DeerBroscheText);
     }
     public void SelectGeburtsurkunde()
     {
-        IsInventar = false;
-        HideInventar();
-        Geburtsurkunde.transform.position = new Vector3(-2, 0, 9);
-        Geburtsurkunde.SetActive(true);
-        Panel.SetActive(true);
-        GeburtsurkundeText.SetActive(true);
+        OnInventoryItemClick(Geburtsurkunde, GeburtsurkundeText);
     }
     public void SelectKugel()
     {
-        /*IsInventar = false;
-        HideInventar();
-        .transform.position = new Vector3(-2, 0, 9);
-        Geburtsurkunde.SetActive(true);
-        Panel.SetActive(true);
-        GeburtsurkundeText.SetActive(true);*/
+        //OnInventoryItemClick();
     }
     public void SelectSkizzeMitFrau()
     {
-        IsInventar = false;
-        HideInventar();
-        skizze_mit_frau.transform.position = new Vector3(-2, 0, 9);
-        skizze_mit_frau.SetActive(true);
-        Panel.SetActive(true);
-        SkizzeMitFrauText.SetActive(true);
+        OnInventoryItemClick(skizze_mit_frau, SkizzeMitFrauText);
     }
     public void SelectTuch()
     {
-        IsInventar = false;
-        HideInventar();
-        Tuch.transform.position = new Vector3(-2, 0, 9);
-        Tuch.SetActive(true);
-        Panel.SetActive(true);
-        TuchText.SetActive(true);
+        OnInventoryItemClick(Tuch, TuchText);
     }
     public void SelectZettelAmKompass()
     {
-        IsInventar = false;
-        HideInventar();
-        Zettel_am_Kompass.transform.position = new Vector3(-2, 0, 9);
-        Zettel_am_Kompass.SetActive(true);
-        Panel.SetActive(true);
-        ZettelAmKompassText.SetActive(true);
+        OnInventoryItemClick(Zettel_am_Kompass, ZettelAmKompassText);
     }
 
     public void Characters () {
-        Debug.Log("Characters");
+        //Debug.Log("Characters");
     }
 
     public void Mission () {
-        Debug.Log("Mission");
+        //Debug.Log("Mission");
     }
 }
