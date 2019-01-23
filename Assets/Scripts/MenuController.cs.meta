@@ -3,14 +3,7 @@ guid: 8ae7fac4a98594292bbede1d7633b679
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - pinsel: {fileID: 100000, guid: 2203f90e25bf641d18644fb87258017e, type: 3}
-  - portraitludwig: {instanceID: 0}
-  - rotehand: {instanceID: 0}
-  - gun_HvG: {instanceID: 0}
-  - gun_KvP: {instanceID: 0}
-  - gun_LvH: {instanceID: 0}
-  - windkompass_anim: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
