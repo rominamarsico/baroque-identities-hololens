@@ -14,9 +14,6 @@ public class MenuController : MonoBehaviour
     public IList<GameObject> newInventoryObjects;
     public IList<GameObject> TextObjects;
 
-    public AudioSource menu;
-    public AudioSource scan;
-
     //Inventar von Beginn an
     public GameObject pinsel;
     public GameObject portraitludwig;
@@ -73,6 +70,26 @@ public class MenuController : MonoBehaviour
     public GameObject GeburtsurkundeText;
     public GameObject DeerBroscheText;
 
+    //Audio Source Clicks
+    public AudioSource menuArrowButtonClick;
+    public AudioSource menuItemClick;
+    //public AudioSource scan;
+
+    //Audio Source NFC tags
+    public AudioSource ArchiveSound;
+    public AudioSource BriefAugustSound;
+    public AudioSource BriefsammlungSound;
+    public AudioSource IntroSound;
+    public AudioSource SchatulleSound;
+    public AudioSource skizzeFrauSound;
+    public AudioSource skizzenBuchSound;
+    public AudioSource zettelKompassSound;
+
+    void Awake ()
+    {
+        StartCoroutine(ClearNfcInput());
+    }
+
     // Use this for initialization
     void Start () {
         InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
@@ -81,10 +98,9 @@ public class MenuController : MonoBehaviour
 
         for (int i = 0; i <TextObjects.Count; i++)
         {
-            Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
+            // Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
         }
-
-        StartCoroutine(ClearNfcInput());
+        
         HideText();
     }
 
@@ -138,7 +154,7 @@ public class MenuController : MonoBehaviour
 
         if (inventar.Contains("Inventar") || character.Contains("Character") || mission.Contains("Mission"))
         {
-            //menu.Play();
+            //menuArrowButtonClick.Play();
         }
 
         if (inventar.Contains("Inventar"))
@@ -178,17 +194,30 @@ public class MenuController : MonoBehaviour
         if (nfcTag.Contains("schatulle") && !newInventoryObjects.Contains(Schatulle))
         {
             newInventoryObjects.Add(Schatulle);
+            SchatulleSound.Play();
+        }
+        else if (nfcTag.Contains("briefsammlung") && !newInventoryObjects.Contains(Brief_Februar))
+        {
+            newInventoryObjects.Add(Brief_Februar);
+            newInventoryObjects.Add(Brief_Mai_1741);
+            newInventoryObjects.Add(Brief_Maerz);
+            newInventoryObjects.Add(Brief_Mai_1754);
+            BriefsammlungSound.Play();
         }
         else if (nfcTag.Contains("skizzenbuch") && !newInventoryObjects.Contains(skizzenbuch))
         {
             newInventoryObjects.Add(skizzenbuch);
+            skizzenBuchSound.Play();
         }
         else if (nfcTag.Contains("skizzeFrau") && !newInventoryObjects.Contains(skizze_mit_frau))
         {
             newInventoryObjects.Add(skizze_mit_frau);
-        } else if (nfcTag.Contains("archive") && !newInventoryObjects.Contains(archive))
+            skizzeFrauSound.Play();
+        }
+        else if (nfcTag.Contains("archive") && !newInventoryObjects.Contains(archive))
         {
             newInventoryObjects.Add(archive);
+            ArchiveSound.Play();
         }
         else if (nfcTag.Contains("2damen") && !newInventoryObjects.Contains(zweiDamen))
         {
@@ -209,34 +238,21 @@ public class MenuController : MonoBehaviour
         else if (nfcTag.Contains("zettelKompass") && !newInventoryObjects.Contains(Zettel_am_Kompass))
         {
             newInventoryObjects.Add(Zettel_am_Kompass);
+            zettelKompassSound.Play();
         }
         else if (nfcTag.Contains("briefAugust") && !newInventoryObjects.Contains(Brief_August))
         {
             newInventoryObjects.Add(Brief_August);
-        }
-        else if (nfcTag.Contains("briefFebruar") && !newInventoryObjects.Contains(Brief_Februar))
-        {
-            newInventoryObjects.Add(Brief_Februar);
+            BriefAugustSound.Play();
         }
         else if (nfcTag.Contains("briefJuni") && !newInventoryObjects.Contains(Brief_Juni))
         {
             newInventoryObjects.Add(Brief_Juni);
         }
-        else if (nfcTag.Contains("briefMaerz") && !newInventoryObjects.Contains(Brief_Maerz))
-        {
-            newInventoryObjects.Add(Brief_Maerz);
-        }
-        else if (nfcTag.Contains("briefMai1741") && !newInventoryObjects.Contains(Brief_Mai_1741))
-        {
-            newInventoryObjects.Add(Brief_Mai_1741);
-        }
         else if (nfcTag.Contains("skizzeFrau") && !newInventoryObjects.Contains(skizze_mit_frau))
         {
             newInventoryObjects.Add(skizze_mit_frau);
-        }
-        else if (nfcTag.Contains("briefMai1754") && !newInventoryObjects.Contains(Brief_Mai_1754))
-        {
-            newInventoryObjects.Add(Brief_Mai_1754);
+            skizzeFrauSound.Play();
         }
         else
         {
@@ -254,6 +270,11 @@ public class MenuController : MonoBehaviour
     {
         CursorArrowRechts.SetActive(false);
         CursorArrowLinks.SetActive(false);
+    }
+
+    public void OnBackButtonClick()
+    {
+        menuItemClick.Play();
     }
 
     public void OnTriggerInventar(){
@@ -356,6 +377,7 @@ public class MenuController : MonoBehaviour
         inventoryItem.transform.position = new Vector3(-1, 0, 9);
         inventoryItem.SetActive(true);
         inventoryItemText.SetActive(true);
+        menuItemClick.Play();
     }
 
     public void SelectPortraitLudwig()
