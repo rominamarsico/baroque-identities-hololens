@@ -257,6 +257,84 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff74aedd0cafcd14680203a68b48e761, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &47572322
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 47572323}
+  - component: {fileID: 47572325}
+  - component: {fileID: 47572324}
+  m_Layer: 5
+  m_Name: GunLvHText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &47572323
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47572322}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &47572324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47572322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Die mit Pressluft kalibrierten Gro\xDFkugeln schienen ger\xE4uschlos. Diese
+    Exemplare sind heutzutage verboten mit der Begr\xFCndung, dass man \u201Emit solch
+    m\xF6rderisch Waffen einen Menschen hinrichten k\xF6nne, unvermerkt, wo es herkomme\u201C.\nDie
+    Initialen am Griff weisen auf den Besitzer der Waffe hin.\nL. v. H. -  Waffenl\xE4nge
+    130 cm, Gewehrkugeln 6 g, Alleingewicht 30 kg"
+--- !u!222 &47572325
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47572322}
 --- !u!1 &81968994 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 59d0bb9f35f6f492e815eee2551ece76, type: 3}
@@ -425,6 +503,85 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 1b8e07aa1a082480f8bddf391a3cd6e1, type: 3}
+--- !u!1 &152533413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 152533414}
+  - component: {fileID: 152533416}
+  - component: {fileID: 152533415}
+  m_Layer: 5
+  m_Name: DeerBroscheText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &152533414
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 152533413}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &152533415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 152533413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Nasse Hirschbrosche:\nNahe des Flusses gefunden, wo man den verst\xF6rten
+    Maler entdeckte. Eine Brosche mit dem Kopf eines Hirsches. Auf der R\xFCckseite
+    ist etwas eingekerbt: \u201CVon Georg an Rosi\u201D. Vergilbt vom Wasser des Sees.
+    Sie muss Jahre lang im See verborgen gewesen sein. l\xE4sst sich erkennen, dass
+    es sich um einen gut ausgewachsener Hirsch handelt.) Ob man diesen Hirsch wohl
+    im Schloss finden kann?"
+--- !u!222 &152533416
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 152533413}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,44 +1129,28 @@ MonoBehaviour:
   Tuch: {fileID: 450675706}
   Panel: {fileID: 1796120553}
   PortraitLudwigText: {fileID: 874648917}
-  PinselText: {fileID: 1325419820009656, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
-  RoteHandText: {fileID: 1654610680030868, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  GunHvGText: {fileID: 1046751410354396, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
-  GunKvPText: {fileID: 1630942682488386, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
-  GunLvHText: {fileID: 1477612063760752, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
-  WindkompassText: {fileID: 1756354177823208, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  SkizzenbuchText: {fileID: 1143934158041856, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  SkizzeMitFrauText: {fileID: 1821671333998348, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  ArchiveText: {fileID: 1556242970353986, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  BriefAugustText: {fileID: 1103640235891046, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  SchatulleText: {fileID: 1691249728877142, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  BriefFebruarText: {fileID: 1847515660092830, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  BriefMai1741Text: {fileID: 1730583658071000, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  BriefMai1754Text: {fileID: 1960094773495020, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  BriefMaerzText: {fileID: 1848346781192904, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  ZettelAmKompassText: {fileID: 1629087739005782, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  ZweiDamenText: {fileID: 1227972234450000, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  KugelText: {fileID: 1091811223459498, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
-  BriefJuniText: {fileID: 1643072156449608, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  TuchText: {fileID: 1986522912541152, guid: 7fe1d95e1175c477d952166a36671230, type: 2}
-  GeburtsurkundeText: {fileID: 1578446617768128, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
-  DeerBroscheText: {fileID: 1622545785902528, guid: 7fe1d95e1175c477d952166a36671230,
-    type: 2}
+  PinselText: {fileID: 1590688408}
+  RoteHandText: {fileID: 1931276140}
+  GunHvGText: {fileID: 1479762823}
+  GunKvPText: {fileID: 1024089594}
+  GunLvHText: {fileID: 47572322}
+  WindkompassText: {fileID: 1880847342}
+  SkizzenbuchText: {fileID: 1211481385}
+  SkizzeMitFrauText: {fileID: 522459274}
+  ArchiveText: {fileID: 501087275}
+  BriefAugustText: {fileID: 1251889424}
+  SchatulleText: {fileID: 1233377447}
+  BriefFebruarText: {fileID: 1536896006}
+  BriefMai1741Text: {fileID: 1687576648}
+  BriefMai1754Text: {fileID: 1428870809}
+  BriefMaerzText: {fileID: 745004471}
+  ZettelAmKompassText: {fileID: 597918254}
+  ZweiDamenText: {fileID: 692259285}
+  KugelText: {fileID: 2053139080}
+  BriefJuniText: {fileID: 1216931949}
+  TuchText: {fileID: 1888439463}
+  GeburtsurkundeText: {fileID: 1951724685}
+  DeerBroscheText: {fileID: 152533413}
 --- !u!4 &427454138
 Transform:
   m_ObjectHideFlags: 0
@@ -1355,6 +1496,84 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!1 &501087275
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 501087276}
+  - component: {fileID: 501087278}
+  - component: {fileID: 501087277}
+  m_Layer: 5
+  m_Name: ArchiveText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &501087276
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501087275}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 39}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &501087277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501087275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "August 1747 - > Lesezeichen\nMaurice Jean Beaumont, Alice Luisa Gr\xFC\xDF,\nEric
+    Ludwig Phantomhive, Bilbo Baggins,\nOscar Gentle, Maria Theresia von Wittelsbach,
+    Sebastian Michaelis Gregor, Sophie Herbsti, Ernestine Rosine Goll, Malte Altstein,
+    Margerite Milla Blume, Hilde Rosamund, Karl Sebastian Wohl, Ella Bella, Dietrich
+    Heinz G\xFCnther"
+--- !u!222 &501087278
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 501087275}
 --- !u!1 &513200957 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 10db8e2512715447ea8a58f9f63c63e1, type: 3}
@@ -1373,6 +1592,83 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 10db8e2512715447ea8a58f9f63c63e1, type: 3}
+--- !u!1 &522459274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 522459275}
+  - component: {fileID: 522459277}
+  - component: {fileID: 522459276}
+  m_Layer: 5
+  m_Name: SkizzeMitFrauText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &522459275
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522459274}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &522459276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522459274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Eine Skizze im Atelier des Malers entdeckt. Sie deutet eine Person mit
+    einem Gewehr mit den Initialien K.v.P. an. Es scheint eine Vorskizze zu sein.
+    Auf der Skizze steht \u201CVorzeichnung f\xFCr Jagdspektakelportrait August 1757.
+    Um wen es sich hier wohl handelt?"
+--- !u!222 &522459277
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 522459274}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1834,82 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 17d9eab6cbd6b478ab33a6266bdab41f, type: 3}
   m_PrefabInternal: {fileID: 594793272}
+--- !u!1 &597918254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 597918255}
+  - component: {fileID: 597918257}
+  - component: {fileID: 597918256}
+  m_Layer: 5
+  m_Name: ZettelAmKompassText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &597918255
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597918254}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &597918256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597918254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Ein Zettel der in der N\xE4he des Fernrohrs gefunden wurde. \u201CWenn
+    der Engel auf den Sonnenaufgang zeigt, richtet er seinen strafenden Pfeil auf
+    den Ort der S\xFCnde.\u201D Was mag das bedeuten?"
+--- !u!222 &597918257
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 597918254}
 --- !u!1 &611472282 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: b3d32c2eb1f7947d8bd76bf916e3d571, type: 3}
@@ -1687,6 +2059,83 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 6aafad1e5f7854835b311d73e1d11617, type: 3}
+--- !u!1 &692259285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 692259286}
+  - component: {fileID: 692259288}
+  - component: {fileID: 692259287}
+  m_Layer: 5
+  m_Name: ZweiDamenText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &692259286
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 692259285}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &692259287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 692259285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Bild aus dem August im Jahre 1747:\n\nEin Bild mit der Aufschrift \u201CZwei
+    Damen im Wald\u201D zeigt den See am Schloss Kranichstein. Nanu? Es ist ja nur
+    eine Person auf dem Bild zu sehen.\nDu k\xF6nntest nachsehen, wo dieser Ort auf
+    der Karte liegt\u2026"
+--- !u!222 &692259288
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 692259285}
 --- !u!1001 &712525433
 Prefab:
   m_ObjectHideFlags: 0
@@ -1811,6 +2260,84 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: cf335f97aefe043a2876a48bf885617e, type: 3}
   m_PrefabInternal: {fileID: 717729883}
+--- !u!1 &745004471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 745004472}
+  - component: {fileID: 745004474}
+  - component: {fileID: 745004473}
+  m_Layer: 5
+  m_Name: BriefMaerzText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &745004472
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745004471}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &745004473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745004471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Brief des Malers an seine Schwester Ernestine.\n\nM\xE4rz 1742:\nLieber
+    Gegi,\n\nHerzlichen Dank f\xFCr dein wundersch\xF6nes Geschenk. Es ist kaum zu
+    glauben, dass du sie selbst entworfen hast. Die liebenden Hirsche sehen genauso
+    aus wie unsere Lieblings Troph\xE4e, \xFCber die wir uns so lustig gemacht haben.
+    Ach, ich mach nur Spa\xDF. "
+--- !u!222 &745004474
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745004471}
 --- !u!1 &769391951
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,14 +2462,14 @@ RectTransform:
   m_GameObject: {fileID: 874648917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 1.7, z: 1}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1796120554}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.9, y: 63.04}
+  m_AnchoredPosition: {x: 0.9, y: 38.999756}
   m_SizeDelta: {x: 160.5, y: 143.92}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &874648919
@@ -1966,11 +2493,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 47
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2264,6 +2791,84 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 946273765}
+--- !u!1 &1024089594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1024089595}
+  - component: {fileID: 1024089597}
+  - component: {fileID: 1024089596}
+  m_Layer: 5
+  m_Name: GunKvPText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1024089595
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024089594}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1024089596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024089594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Die mit Pressluft kalibrierten Gro\xDFkugeln schienen ger\xE4uschlos. Diese
+    Exemplare sind heutzutage verboten mit der Begr\xFCndung, dass man \u201Emit solch
+    m\xF6rderisch Waffen einen Menschen hinrichten k\xF6nne, unvermerkt, wo es herkomme\u201C.\nDie
+    Initialen am Griff weisen auf den Besitzer der Waffe hin.\nK. v. P. - Kaliber,
+    Waffenl\xE4nge 120 cm, Gewehrkugeln 7 g, Alleingewicht: 20 kg"
+--- !u!222 &1024089597
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024089594}
 --- !u!1001 &1052363698
 Prefab:
   m_ObjectHideFlags: 0
@@ -2404,6 +3009,160 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa03f4382fb1c49358c5c0b2faed613d, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1211481385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1211481386}
+  - component: {fileID: 1211481388}
+  - component: {fileID: 1211481387}
+  m_Layer: 5
+  m_Name: SkizzenbuchText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1211481386
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1211481385}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1211481387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1211481385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: Ein Skizzenbuch des Malers Georgs. Hochwertiges Papier aus Hadern, also
+    alte Lumpen aus Kleidung und Stoff. Er schien hier eine Brosche mit Hirschkopf
+    zu entwerfen. Er scheint eine Vorlage gehabt zu haben...
+--- !u!222 &1211481388
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1211481385}
+--- !u!1 &1216931949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1216931950}
+  - component: {fileID: 1216931952}
+  - component: {fileID: 1216931951}
+  m_Layer: 5
+  m_Name: BriefJuniText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1216931950
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216931949}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1216931951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216931949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Brief von Rosie an Georg\n\nJuni 1747:\nLieber Gegi,\nich muss mich kurz
+    fassen. Habe Angst, dass dieser Brief abgefangen wird. Mir schwant \xDCbles. Solltest
+    du je zur\xFCckkehren, denke an unser kleines Versteckspiel. Wo die Liebenden
+    sich im Flur der Hirsche treffen, wird mein Geheimnis gewahrt.\nSei dir sicher,
+    wenn weitere Briefe kommen sind diese nicht von mir!\n\nDeine liebende Schwester\nRosi"
+--- !u!222 &1216931952
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1216931949}
 --- !u!1001 &1219128165
 Prefab:
   m_ObjectHideFlags: 0
@@ -2462,6 +3221,81 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2979afd5c217c447abc413b8214b474e, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1233377447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1233377448}
+  - component: {fileID: 1233377450}
+  - component: {fileID: 1233377449}
+  m_Layer: 5
+  m_Name: SchatulleText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1233377448
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233377447}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1233377449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233377447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Ein altes K\xE4stchen gefunden im Atelier des Malers. Es ist mit einem
+    Schloss verschlossen.Wof\xFCr wohl die Initialen am Zahlenschloss stehen?"
+--- !u!222 &1233377450
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1233377447}
 --- !u!1001 &1243501428
 Prefab:
   m_ObjectHideFlags: 0
@@ -2528,6 +3362,82 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79e539b82cc9f5a47827cbcaf32cfc5d, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &1251889424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1251889425}
+  - component: {fileID: 1251889427}
+  - component: {fileID: 1251889426}
+  m_Layer: 5
+  m_Name: BriefAugustText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1251889425
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251889424}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1251889426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251889424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Brief von Ernestine an ihren Bruder\n\nAugust 1757:\nLiebster Bruder,\nNach
+    all der Zeit werde ich den Hof verlassen. Es stinkt mir zum Himmel hier. Frag
+    nicht und suche nicht nach mir. \nAuf wiedersehen.\n\nDeine liebende Schwester"
+--- !u!222 &1251889427
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1251889424}
 --- !u!1001 &1309189855
 Prefab:
   m_ObjectHideFlags: 0
@@ -2746,6 +3656,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5bb33d0c0234abd9937fc54192e55c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1428870809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1428870810}
+  - component: {fileID: 1428870812}
+  - component: {fileID: 1428870811}
+  m_Layer: 5
+  m_Name: BriefMai1754Text
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1428870810
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428870809}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1428870811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428870809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Brief des Malers an seine Schwester Ernestine.\n\nMai 1754:\nLiebe Rosi,
+    \nIch schreibe dir nun schon zum wiederholten Male und doch scheinst du mich zu
+    meiden. Es ist nun schon \xFCber 7 Jahre her... Was hatte dein letzter Brief zu
+    bedeuten?\nWas soll das hei\xDFen, du verl\xE4sst den Hof? Was ist mit deinem
+    Sohn?\nBitte antworte! Ich werde bald zur\xFCckzukehren. Dann l\xF6se ich dein
+    Geheimnis!  ..."
+--- !u!222 &1428870812
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1428870809}
 --- !u!1001 &1433637926
 Prefab:
   m_ObjectHideFlags: 0
@@ -2974,6 +3963,84 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 10db8e2512715447ea8a58f9f63c63e1, type: 3}
   m_PrefabInternal: {fileID: 1462212733}
+--- !u!1 &1479762823
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1479762824}
+  - component: {fileID: 1479762826}
+  - component: {fileID: 1479762825}
+  m_Layer: 5
+  m_Name: GunHvGText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1479762824
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479762823}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1479762825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479762823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Die mit Pressluft kalibrierten Gro\xDFkugeln schienen ger\xE4uschlos. Diese
+    Exemplare sind heutzutage verboten mit der Begr\xFCndung, dass man \u201Emit solch
+    m\xF6rderisch Waffen einen Menschen hinrichten k\xF6nne, unvermerkt, wo es herkomme\u201C.\nDie
+    Initialen am Griff weisen auf den Besitzer der Waffe hin.\nH. v. G.- Kaliber,
+    Waffenl\xE4nge 130 cm, Gewehrkugeln 5 g, Alleingewicht 25 kg"
+--- !u!222 &1479762826
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479762823}
 --- !u!1 &1509959023
 GameObject:
   m_ObjectHideFlags: 0
@@ -3096,6 +4163,84 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 2ae9cc2a4d179444dbc7d3051043e03c, type: 3}
+--- !u!1 &1536896006
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1536896007}
+  - component: {fileID: 1536896009}
+  - component: {fileID: 1536896008}
+  m_Layer: 5
+  m_Name: BriefFebruarText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1536896007
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536896006}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1536896008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536896006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Brief des Malers an seine Schwester Ernestine.\n\nFebruar 1740:\nLieber
+    Gegi,\nDanke, dass du dich weiterhin um mich sorgst, doch du brauchst dich nicht
+    zu f\xFCrchten. Seitdem du vor einem Jahr den Hof verlassen hast, ist einiges
+    passiert. Doch ich habe einen netten Mann kennengelernt, doch das muss unser Geheimnis
+    bleiben!\n\ndein Schwesterherzchen\nRosi"
+--- !u!222 &1536896009
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1536896006}
 --- !u!1 &1560688951 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: fa03f4382fb1c49358c5c0b2faed613d, type: 3}
@@ -3203,6 +4348,81 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 59d0bb9f35f6f492e815eee2551ece76, type: 3}
   m_PrefabInternal: {fileID: 1564410952}
+--- !u!1 &1590688408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1590688409}
+  - component: {fileID: 1590688411}
+  - component: {fileID: 1590688410}
+  m_Layer: 5
+  m_Name: PinselText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1590688409
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1590688408}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1590688410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1590688408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Ein Pinsel mit Naturhaarfasern, das Werkzeug eines Meisters. Ein kleines
+    G. weist auf den Maler Georg hin. Der Pinsel muss also ihm geh\xF6ren."
+--- !u!222 &1590688411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1590688408}
 --- !u!1 &1642504781
 GameObject:
   m_ObjectHideFlags: 0
@@ -3298,6 +4518,84 @@ MonoBehaviour:
   m_Script: {fileID: 1898958984, guid: f7b54ff4a43d4fcf81b4538b678e0bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1687576648
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1687576649}
+  - component: {fileID: 1687576651}
+  - component: {fileID: 1687576650}
+  m_Layer: 5
+  m_Name: BriefMai1741Text
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1687576649
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687576648}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1687576650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687576648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Brief des Malers an seine Schwester Ernestine.\n\nMai 1741:\nLieber Gegi,\nDanke
+    f\xFCr deinen letzten Brief, doch sorge dich nicht um mich und um meine heimliche
+    Affaire. Ja, er m\xF6chte es nicht \xF6ffentlich zugeben, du wei\xDFt, er ist
+    nicht wie wir.. Eher von feinem Hause. Ich muss dir noch etwas gestehen, ach hoffentlich
+    freust du dich wie ich. Ich bin schwanger!"
+--- !u!222 &1687576651
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1687576648}
 --- !u!1 &1737628331 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5649ef9f2fe6c4eaa9b16449969d7f04, type: 3}
@@ -3349,6 +4647,28 @@ RectTransform:
   m_Children:
   - {fileID: 1882539579}
   - {fileID: 874648918}
+  - {fileID: 1590688409}
+  - {fileID: 1931276141}
+  - {fileID: 1479762824}
+  - {fileID: 1024089595}
+  - {fileID: 47572323}
+  - {fileID: 1880847343}
+  - {fileID: 1211481386}
+  - {fileID: 522459275}
+  - {fileID: 501087276}
+  - {fileID: 1251889425}
+  - {fileID: 1233377448}
+  - {fileID: 1536896007}
+  - {fileID: 1687576649}
+  - {fileID: 1428870810}
+  - {fileID: 745004472}
+  - {fileID: 597918255}
+  - {fileID: 692259286}
+  - {fileID: 2053139081}
+  - {fileID: 1216931950}
+  - {fileID: 1888439464}
+  - {fileID: 1951724686}
+  - {fileID: 152533414}
   m_Father: {fileID: 2121059262}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3390,6 +4710,81 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1796120553}
+--- !u!1 &1880847342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1880847343}
+  - component: {fileID: 1880847345}
+  - component: {fileID: 1880847344}
+  m_Layer: 5
+  m_Name: WindkompassText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1880847343
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880847342}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1880847344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880847342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Der Wind Kompass an der Decke des Pavillon. Ein sehr extravagantes St\xFCck.
+    Ein kleiner Engel zeigt die jeweilige Himmelsrichtung an aus der der Wind bl\xE4st."
+--- !u!222 &1880847345
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880847342}
 --- !u!1 &1882539578
 GameObject:
   m_ObjectHideFlags: 0
@@ -3538,6 +4933,84 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 0}
+--- !u!1 &1888439463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1888439464}
+  - component: {fileID: 1888439466}
+  - component: {fileID: 1888439465}
+  m_Layer: 5
+  m_Name: TuchText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1888439464
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888439463}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1888439465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888439463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Blutbeschmiertes Seidentuch:\nIn der N\xE4he des Flusses in einem Busch
+    gefunden. Ein altes, ranziges Seidentuch, was die Initialen In Liebe L f\xFCr
+    E.R.G zeigt. Es ist mit altem Blut beschmiert. Dem Muster nach zu Schlie\xDFen
+    muss es 10 Jahre alt sein. K\xF6nnte es einem der G\xE4ste vor 10 Jahren geh\xF6rt
+    haben?"
+--- !u!222 &1888439466
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1888439463}
 --- !u!1 &1900131666 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: fa03f4382fb1c49358c5c0b2faed613d, type: 3}
@@ -3574,6 +5047,82 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: f8e959be4f6014b0e9ca8152b1337980, type: 3}
+--- !u!1 &1931276140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1931276141}
+  - component: {fileID: 1931276143}
+  - component: {fileID: 1931276142}
+  m_Layer: 5
+  m_Name: RoteHandText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1931276141
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931276140}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1931276142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931276140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Rote H\xE4nde des Jungen Eduards. Als man den Jungen aufsp\xFCrte, wiesen
+    seine H\xE4nde verd\xE4chtige rote Farbflecken auf! Ein klarer Beweis, dass er
+    der T\xE4ter sein muss, oder?"
+--- !u!222 &1931276143
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1931276140}
 --- !u!1 &1937233599 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: e16c79d57a578459b9820d07b0cc7b06, type: 3}
@@ -3703,6 +5252,83 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300002, guid: fa03f4382fb1c49358c5c0b2faed613d, type: 3}
+--- !u!1 &1951724685
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1951724686}
+  - component: {fileID: 1951724688}
+  - component: {fileID: 1951724687}
+  m_Layer: 5
+  m_Name: GeburtsurkundeText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1951724686
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951724685}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 22
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1951724687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951724685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Gegi, wenn du dies findest, bin ich nicht mehr am Leben.\nIch habe einen
+    Entschluss gefasst. Am gro\xDFen Jagd Spektakel in einem Monat werde ich mit der
+    Gattin meines Geliebten reden. Mein Sohn soll es gut haben. \nBitte k\xFCmmere
+    dich um ihn, sollte ich nicht mehr da sein.\n\nDeine liebende schwester\nRosi "
+--- !u!222 &1951724688
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951724685}
 --- !u!1 &1960950557 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100006, guid: 9fae5b2b04e4e454eacb53c49632e767, type: 3}
@@ -3918,6 +5544,83 @@ Transform:
   m_Father: {fileID: 427454138}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2053139080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2053139081}
+  - component: {fileID: 2053139083}
+  - component: {fileID: 2053139082}
+  m_Layer: 5
+  m_Name: KugelText
+  m_TagString: Text
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2053139081
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2053139080}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3.5, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1796120554}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.8957479, y: 38.99996}
+  m_SizeDelta: {x: 160.5, y: 143.92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2053139082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2053139080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 47
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: "Kugel aus einer Windb\xFCchse:\nRunde Windb\xFCchsenkugeln wie damals \xFCblich.
+    Sie wurde von einer kurzen Distanz auf einen Baum abgefeuert. Den Altersspuren
+    und Typ des Kalibers  nach muss die Kugel vor 10 Jahren abgefeuert worden sein.
+    Zu welcher Waffe sie wohl geh\xF6ren? "
+--- !u!222 &2053139083
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2053139080}
 --- !u!1 &2081086494 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: de96d87edf2c943c4b299e15c5f4d448, type: 3}
