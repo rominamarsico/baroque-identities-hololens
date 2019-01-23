@@ -81,7 +81,7 @@ public class MenuController : MonoBehaviour
 
         for (int i = 0; i <TextObjects.Count; i++)
         {
-            //Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
+            Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
         }
 
         StartCoroutine(ClearNfcInput());
@@ -353,7 +353,7 @@ public class MenuController : MonoBehaviour
         IsInventar = false;
         HideInventar();
         Panel.SetActive(true);
-        inventoryItem.transform.position = new Vector3(-2, 0, 9);
+        inventoryItem.transform.position = new Vector3(-1, 0, 9);
         inventoryItem.SetActive(true);
         inventoryItemText.SetActive(true);
     }
@@ -361,6 +361,7 @@ public class MenuController : MonoBehaviour
     public void SelectPortraitLudwig()
     {
         OnInventoryItemClick(portraitludwig, PortraitLudwigText);
+        Debug.Log("selected portrait ludwig");
     }
     public void SelectPinsel()
     {
