@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CursorArrowRechts : MonoBehaviour {
     public int ClickRight;
-    public int ObjectCounter;
+    public int CharacterArrowClickRight;
 
     public AudioSource click;
 
@@ -12,10 +12,19 @@ public class CursorArrowRechts : MonoBehaviour {
     {
         //Debug.Log("Arrow Rechts Clicked");
         click.Play();
-        ClickRight++;
         var menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
         menuController.Left = false;
         menuController.right = true;
-        menuController.ObjectCounter = menuController.ObjectCounter+3;
+
+        if (menuController.CharacterArrows == true)
+        {
+            CharacterArrowClickRight++;
+            menuController.CharacterObjectCounter = menuController.CharacterObjectCounter + 3;
+        }
+        else if (menuController.InventoryArrows == true)
+        {
+            ClickRight++;
+            menuController.ObjectCounter = menuController.ObjectCounter + 3;
+        }
     }
 }

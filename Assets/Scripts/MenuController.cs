@@ -8,12 +8,18 @@ public class MenuController : MonoBehaviour
     public bool Left = false;
     public bool right = false;
     public bool IsInventar = true;
+    public bool InventoryArrows = false;
+    public bool CharacterArrows = false;
+
     public GameObject CursorArrowRechts;
     public GameObject CursorArrowLinks;
     public GameObject MissionPlan;
     public GameObject[] InventaryObjects;
+
     public IList<GameObject> newInventoryObjects;
     public IList<GameObject> TextObjects;
+    public IList<GameObject> PortraitImages;
+    public IList<GameObject> PortraitTexts;
 
     //Inventar von Beginn an
     public GameObject pinsel;
@@ -25,6 +31,7 @@ public class MenuController : MonoBehaviour
     public GameObject windkompass_anim;
 
     public int ObjectCounter;
+    public int CharacterObjectCounter;
 
     //Inventar Atelier
     public GameObject skizzenbuch;
@@ -71,6 +78,14 @@ public class MenuController : MonoBehaviour
     public GameObject GeburtsurkundeText;
     public GameObject DeerBroscheText;
 
+    //Characters
+    public GameObject doctorPortrait;
+    public GameObject eduardoPortrait;
+    public GameObject karolinePortrait;
+    public GameObject leutnantinPortrait;
+    public GameObject ludwigPortrait;
+    public GameObject malerPortrait;
+
     //Audio Source Clicks
     public AudioSource menuArrowButtonClick;
     public AudioSource menuItemClick;
@@ -97,6 +112,7 @@ public class MenuController : MonoBehaviour
         InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
         newInventoryObjects = new List<GameObject>(InventaryObjects);
         TextObjects = GameObject.FindGameObjectsWithTag("Text");
+        PortraitImages = GameObject.FindGameObjectsWithTag("character");
 
         for (int i = 0; i <TextObjects.Count; i++)
         {
@@ -168,6 +184,9 @@ public class MenuController : MonoBehaviour
             Debug.Log(wwwInventar.downloadHandler.text);
             OnTriggerInventar();
             HideMission();
+            HideCharacters();
+            InventoryArrows = true;
+            CharacterArrows = false;
         }
         else if (character.Contains("Character"))
         {
@@ -175,6 +194,8 @@ public class MenuController : MonoBehaviour
             Characters();
             HideInventar();
             HideMission();
+            CharacterArrows = true;
+            InventoryArrows = false;
         }
         else if (mission.Contains("Mission"))
         {
@@ -182,12 +203,20 @@ public class MenuController : MonoBehaviour
             Debug.Log(wwwMission.downloadHandler.text);
             Mission();
             HideInventar();
+            HideCharacters();
+            CharacterArrows = false;
+            InventoryArrows = false;
+            HideArrows();
         }
         else
         {
             Debug.Log("No menu controller is triggert.");
             HideInventar();
             HideMission();
+            HideCharacters();
+            HideArrows();
+            CharacterArrows = false;
+            InventoryArrows = false;
         }
     }
 
@@ -303,71 +332,13 @@ public class MenuController : MonoBehaviour
         IsInventar = true;
     }
 
-    public void Inventar () {
-        Arrows();
-        HideText();
-        var ClickCounterRight = CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight;
-        var ClickCounterLeft = CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft;
-        var ClickCounter = ClickCounterRight - ClickCounterLeft;
-        //Debug.Log(ClickCounterRight);
-        if (ObjectCounter == 0)
-        {
-            CursorArrowLinks.SetActive(false);
-        }
-        else
-            CursorArrowLinks.SetActive(true);
-
-        if (ObjectCounter+3 == newInventoryObjects.Count || ObjectCounter == newInventoryObjects.Count - 1 || ObjectCounter == newInventoryObjects.Count - 2)
-        {
-            CursorArrowRechts.SetActive(false);
-        }
-        else
-            CursorArrowRechts.SetActive(true);
-
-        for (int i = ClickCounter; i <=newInventoryObjects.Count/3; i++)
-        {
-            if (0 + ObjectCounter < newInventoryObjects.Count)
-            {
-                var MenuObjectOne = newInventoryObjects[0 + ObjectCounter];
-                MenuObjectOne.transform.position = new Vector3(-1, 0, 9);
-                MenuObjectOne.SetActive(MenuObjectOne);
-                if (right == true)
-                {
-                    for (int a = 0; a < 0 + ObjectCounter; a++)
-                    {
-                        newInventoryObjects[a].SetActive(false);
-                        //Debug.Log("Righta:" + a);
-                    }
-                }
-                if (Left==true){
-                    for (int a = 0+newInventoryObjects.Count-1; a > ObjectCounter; a--)
-                    {
-                        //Debug.Log("Left:" + a);
-                        newInventoryObjects[a].SetActive(false);
-
-                    }
-                }
-            }
-
-            if (1 + ObjectCounter < newInventoryObjects.Count)
-            {
-                var MenuObjectTwo = newInventoryObjects[1 + ObjectCounter];
-                MenuObjectTwo.SetActive(MenuObjectTwo);
-                MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
-            }
-
-            if (2 + ObjectCounter < newInventoryObjects.Count)
-            {
-                var MenuObjectThree = newInventoryObjects[2 + ObjectCounter];
-                MenuObjectThree.SetActive(MenuObjectThree);
-                MenuObjectThree.transform.position = new Vector3(1, 0, 9);
-            }
-        }
+    public void Inventar()
+    {
+        buildMenu(newInventoryObjects, CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight, CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft, ObjectCounter);
     }
 
     public void HideInventar()
     {
-        HideArrows();
         foreach (GameObject _gameObject in newInventoryObjects)
         {
             _gameObject.SetActive(false);
@@ -488,8 +459,78 @@ public class MenuController : MonoBehaviour
         OnInventoryItemClick(Zettel_am_Kompass, ZettelAmKompassText);
     }
 
-    public void Characters () {
-        //Debug.Log("Characters");
+    public void Characters()
+    {
+        buildMenu(PortraitImages, CursorArrowRechts.GetComponent<CursorArrowRechts>().CharacterArrowClickRight, CursorArrowLinks.GetComponent<CursorArrowLinks>().CharacterArrowClickLeft, CharacterObjectCounter);
+    }
+
+    public void HideCharacters()
+    {
+        foreach (GameObject _gameObject in PortraitImages)
+        {
+            _gameObject.SetActive(false);
+        }
+    }
+
+    public void buildMenu(IList<GameObject> ObjectArray, int ClickCounterRight, int ClickCounterLeft, int ObjectCounter)
+    {
+        Arrows();
+        HideText();
+        var ClickCounter = ClickCounterRight - ClickCounterLeft;
+
+        if (ObjectCounter == 0)
+        {
+            CursorArrowLinks.SetActive(false);
+        }
+        else
+            CursorArrowLinks.SetActive(true);
+
+        if (ObjectCounter + 3 == ObjectArray.Count || ObjectCounter == ObjectArray.Count - 1 || ObjectCounter == ObjectArray.Count - 2)
+        {
+            CursorArrowRechts.SetActive(false);
+        }
+        else
+        {
+            CursorArrowRechts.SetActive(true);
+        }
+
+        for (int i = ClickCounter; i <= ObjectArray.Count / 3; i++)
+        {
+            if (0 + ObjectCounter < ObjectArray.Count)
+            {
+                var MenuObjectOne = ObjectArray[0 + ObjectCounter];
+                MenuObjectOne.transform.position = new Vector3(-1, 0, 9);
+                MenuObjectOne.SetActive(MenuObjectOne);
+                if (right == true)
+                {
+                    for (int a = 0; a < 0 + ObjectCounter; a++)
+                    {
+                        ObjectArray[a].SetActive(false);
+                    }
+                }
+                if (Left == true)
+                {
+                    for (int a = 0 + ObjectArray.Count - 1; a > ObjectCounter; a--)
+                    {
+                        ObjectArray[a].SetActive(false);
+                    }
+                }
+            }
+
+            if (1 + ObjectCounter < ObjectArray.Count)
+            {
+                var MenuObjectTwo = ObjectArray[1 + ObjectCounter];
+                MenuObjectTwo.SetActive(MenuObjectTwo);
+                MenuObjectTwo.transform.position = new Vector3(0, 0, 9);
+            }
+
+            if (2 + ObjectCounter < ObjectArray.Count)
+            {
+                var MenuObjectThree = ObjectArray[2 + ObjectCounter];
+                MenuObjectThree.SetActive(MenuObjectThree);
+                MenuObjectThree.transform.position = new Vector3(1, 0, 9);
+            }
+        }
     }
 
     public void Mission () {
