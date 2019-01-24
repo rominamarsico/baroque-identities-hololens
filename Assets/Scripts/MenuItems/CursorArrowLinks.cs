@@ -5,7 +5,7 @@ using UnityEngine;
 public class CursorArrowLinks : MonoBehaviour {
 
     public int ClickLeft;
-    public int ObjectCounter;
+    public int CharacterArrowClickLeft;
 
     public AudioSource click;
 
@@ -14,14 +14,20 @@ public class CursorArrowLinks : MonoBehaviour {
         click.Play();
 
         //Debug.Log("Arrow Links Clicked");
-        ClickLeft++;
         var menuController = GameObject.Find("MenuController").GetComponent<MenuController>();
         menuController.Left = true;
-       
-        //Debug.Log(menuController.Left);
+        menuController.right = false;
+        
         if (menuController.ObjectCounter >= 1)
         {
+            ClickLeft++;
             menuController.ObjectCounter = menuController.ObjectCounter - 3;
+        }
+
+        if (menuController.CharacterObjectCounter >= 1)
+        {
+            CharacterArrowClickLeft++;
+            menuController.CharacterObjectCounter = menuController.CharacterObjectCounter - 3;
         }
     }
 }

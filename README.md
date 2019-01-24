@@ -1,11 +1,14 @@
 # Baroque Identities - a HoloLens project
 
-This is a university project at Hochschule Darmstadt, study Leadership in the Creative Industries (MA) <br> <br>
+This is a university project at Hochschule Darmstadt, study Leadership in the Creative Industries (MA)
 
 ### Project Setup
-The project waits for input of the realtime firebase database, which you can influence here: https://baroque-identities.firebaseapp.com/ <br>
-The project link to the website is here: https://github.com/rominamarsico/baroque-identities-webapp <br>
-To use the cloud function to add a message to the realtime database, use this link: https://us-central1-baroque-identities.cloudfunctions.net/addMessage?text=
+The project waits for input of the realtime firebase database, which you can influence here: <br>
+https://baroque-identities.firebaseapp.com/ <br>
+The project link to the website is here: <br>
+https://github.com/rominamarsico/baroque-identities-webapp <br>
+To use the cloud function to add a message to the realtime database, use this link: <br>
+https://us-central1-baroque-identities.cloudfunctions.net/addMessage?text=
 
 ### Project Team:
 Programmer: Isabel Gaubatz, Romina Marsico <br>

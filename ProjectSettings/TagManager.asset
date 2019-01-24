@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Inventar
+  - Text
+  - character
   layers:
   - Default
   - TransparentFX
