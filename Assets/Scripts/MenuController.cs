@@ -8,6 +8,7 @@ public class MenuController : MonoBehaviour
     public bool Left = false;
     public bool right = false;
     public bool IsInventar = true;
+    public bool IsCharacter = true;
     public bool InventoryArrows = false;
     public bool CharacterArrows = false;
 
@@ -85,6 +86,14 @@ public class MenuController : MonoBehaviour
     public GameObject leutnantinPortrait;
     public GameObject ludwigPortrait;
     public GameObject malerPortrait;
+
+    //Character Texte
+    public GameObject doctorText;
+    public GameObject eduardoText;
+    public GameObject karolineText;
+    public GameObject leutnantinText;
+    public GameObject ludwigText;
+    public GameObject malerText;
 
     //Audio Source Clicks
     public AudioSource menuArrowButtonClick;
@@ -190,7 +199,7 @@ public class MenuController : MonoBehaviour
         else if (character.Contains("Character"))
         {
             Debug.Log(wwwCharacter.downloadHandler.text);
-            Characters();
+            OnTriggerCharacter();
             HideInventar();
             HideMission();
             CharacterArrows = true;
@@ -332,6 +341,19 @@ public class MenuController : MonoBehaviour
         IsInventar = true;
     }
 
+    public void OnTriggerCharacter()
+    {
+        if (IsCharacter == true)
+        {
+            Characters();
+        }
+    }
+
+    public void TrueCharacter()
+    {
+        IsCharacter = true;
+    }
+
     public void Inventar()
     {
         buildMenu(newInventoryObjects, CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight, CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft, ObjectCounter);
@@ -354,6 +376,30 @@ public class MenuController : MonoBehaviour
         Panel.SetActive(false);
     }
 
+    public void Characters()
+    {
+        buildMenu(PortraitImages, CursorArrowRechts.GetComponent<CursorArrowRechts>().CharacterArrowClickRight, CursorArrowLinks.GetComponent<CursorArrowLinks>().CharacterArrowClickLeft, CharacterObjectCounter);
+    }
+
+    public void HideCharacters()
+    {
+        foreach (GameObject _gameObject in PortraitImages)
+        {
+            _gameObject.SetActive(false);
+        }
+    }
+
+    public void Mission()
+    {
+        MissionPlan.SetActive(true);
+        MissionPlan.transform.position = new Vector3(0, 0, 9);
+    }
+
+    public void HideMission()
+    {
+        MissionPlan.SetActive(false);
+    }
+
     public void OnInventoryItemClick(GameObject inventoryItem, GameObject inventoryItemText)
     {
         IsInventar = false;
@@ -366,15 +412,9 @@ public class MenuController : MonoBehaviour
         menuItemClick.Play();
     }
 
-    public void OnCharacterClick()
-    {
-
-    }
-
     public void SelectPortraitLudwig()
     {
         OnInventoryItemClick(portraitludwig, PortraitLudwigText);
-        Debug.Log("selected portrait ludwig");
     }
     public void SelectPinsel()
     {
@@ -465,17 +505,41 @@ public class MenuController : MonoBehaviour
         OnInventoryItemClick(Zettel_am_Kompass, ZettelAmKompassText);
     }
 
-    public void Characters()
-    {
-        buildMenu(PortraitImages, CursorArrowRechts.GetComponent<CursorArrowRechts>().CharacterArrowClickRight, CursorArrowLinks.GetComponent<CursorArrowLinks>().CharacterArrowClickLeft, CharacterObjectCounter);
+    public void OnCharacterClick(GameObject character, GameObject characterText)
+    {        
+        IsCharacter = false;
+        HideCharacters();
+        HideArrows();
+        Panel.SetActive(true);
+        character.transform.position = new Vector3(-1, 0, 9);
+        character.SetActive(true);
+        characterText.SetActive(true);
+        menuItemClick.Play();
     }
 
-    public void HideCharacters()
+    public void OnClickDoctor()
     {
-        foreach (GameObject _gameObject in PortraitImages)
-        {
-            _gameObject.SetActive(false);
-        }
+        OnCharacterClick(doctorPortrait, doctorText);
+    }
+    public void OnClickEduardo()
+    {
+        OnCharacterClick(eduardoPortrait, eduardoText);
+    }
+    public void OnClickKaroline()
+    {
+        OnCharacterClick(karolinePortrait, karolineText);
+    }
+    public void OnClickLeutnantin()
+    {
+        OnCharacterClick(leutnantinPortrait, leutnantinText);
+    }
+    public void OnClickLudwig()
+    {
+        OnCharacterClick(ludwigPortrait, ludwigText);
+    }
+    public void OnClickMaler()
+    {
+        OnCharacterClick(malerPortrait, malerText);
     }
 
     public void buildMenu(IList<GameObject> ObjectArray, int ClickCounterRight, int ClickCounterLeft, int ObjectCounter)
@@ -537,14 +601,5 @@ public class MenuController : MonoBehaviour
                 MenuObjectThree.transform.position = new Vector3(1, 0, 9);
             }
         }
-    }
-
-    public void Mission () {
-        MissionPlan.SetActive(true);
-        MissionPlan.transform.position = new Vector3(0, 0, 9);
-    }
-
-    public void HideMission () {
-        MissionPlan.SetActive(false);
     }
 }
