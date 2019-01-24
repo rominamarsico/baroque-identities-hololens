@@ -438,6 +438,7 @@ GameObject:
   - component: {fileID: 179588164}
   - component: {fileID: 179588163}
   - component: {fileID: 179588162}
+  - component: {fileID: 179588165}
   m_Layer: 0
   m_Name: maler
   m_TagString: character
@@ -512,6 +513,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179588160}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &179588165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179588160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e105cd7337410e34fa16b4eff45e358c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &193574576
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +617,6 @@ GameObject:
   - component: {fileID: 205029432}
   - component: {fileID: 205029434}
   - component: {fileID: 205029433}
-  - component: {fileID: 205029435}
   m_Layer: 5
   m_Name: KarolineText
   m_TagString: Text
@@ -675,17 +686,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205029431}
---- !u!114 &205029435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 205029431}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f52eedbd3af1554493484c2631b2acf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &215010864
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1058,7 @@ GameObject:
   - component: {fileID: 249843662}
   - component: {fileID: 249843661}
   - component: {fileID: 249843660}
+  - component: {fileID: 249843663}
   m_Layer: 0
   m_Name: ludwig
   m_TagString: character
@@ -1132,6 +1133,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 249843658}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &249843663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 249843658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614ac3a4c63c68940b999279b5d2df6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &251932241
 GameObject:
   m_ObjectHideFlags: 0
@@ -1443,7 +1455,6 @@ GameObject:
   - component: {fileID: 305297146}
   - component: {fileID: 305297148}
   - component: {fileID: 305297147}
-  - component: {fileID: 305297149}
   m_Layer: 5
   m_Name: DoctorText
   m_TagString: Text
@@ -1514,17 +1525,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 305297145}
---- !u!114 &305297149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 305297145}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aaf3d7aa0f5da94c84eec67c195348e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &353709080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1612,7 +1612,6 @@ GameObject:
   - component: {fileID: 424671684}
   - component: {fileID: 424671686}
   - component: {fileID: 424671685}
-  - component: {fileID: 424671687}
   m_Layer: 5
   m_Name: EduardoText
   m_TagString: Text
@@ -1681,17 +1680,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 424671683}
---- !u!114 &424671687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 424671683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea41fbfb9755b5649b349565cf7569bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &457302419
 GameObject:
   m_ObjectHideFlags: 0
@@ -2841,7 +2829,6 @@ GameObject:
   - component: {fileID: 652583546}
   - component: {fileID: 652583548}
   - component: {fileID: 652583547}
-  - component: {fileID: 652583549}
   m_Layer: 5
   m_Name: LudwigText
   m_TagString: Text
@@ -2913,17 +2900,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 652583545}
---- !u!114 &652583549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652583545}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 614ac3a4c63c68940b999279b5d2df6c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &660544551
 GameObject:
   m_ObjectHideFlags: 0
@@ -5453,6 +5429,7 @@ MonoBehaviour:
   Left: 0
   right: 0
   IsInventar: 1
+  IsCharacter: 1
   InventoryArrows: 0
   CharacterArrows: 0
   CursorArrowRechts: {fileID: 1268913048}
@@ -5750,7 +5727,6 @@ GameObject:
   - component: {fileID: 1187706906}
   - component: {fileID: 1187706908}
   - component: {fileID: 1187706907}
-  - component: {fileID: 1187706909}
   m_Layer: 5
   m_Name: LeutnantinText
   m_TagString: Text
@@ -5822,17 +5798,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1187706905}
---- !u!114 &1187706909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1187706905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2b0e2adca936340be83592f016e304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1201482449
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,7 +6625,6 @@ GameObject:
   - component: {fileID: 1401317696}
   - component: {fileID: 1401317695}
   - component: {fileID: 1401317694}
-  - component: {fileID: 1401317697}
   m_Layer: 5
   m_Name: MalerText
   m_TagString: Text
@@ -6732,17 +6696,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.8951823, y: 39.001465}
   m_SizeDelta: {x: 160.5, y: 143.92}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1401317697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1401317693}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e105cd7337410e34fa16b4eff45e358c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1458083873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6785,6 +6738,7 @@ GameObject:
   - component: {fileID: 1484640234}
   - component: {fileID: 1484640233}
   - component: {fileID: 1484640232}
+  - component: {fileID: 1484640235}
   m_Layer: 0
   m_Name: eduardo
   m_TagString: character
@@ -6859,6 +6813,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1484640230}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1484640235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1484640230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea41fbfb9755b5649b349565cf7569bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1514764895
 GameObject:
   m_ObjectHideFlags: 0
@@ -7979,6 +7944,7 @@ GameObject:
   - component: {fileID: 1879268334}
   - component: {fileID: 1879268333}
   - component: {fileID: 1879268332}
+  - component: {fileID: 1879268335}
   m_Layer: 0
   m_Name: karoline
   m_TagString: character
@@ -8053,6 +8019,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1879268330}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1879268335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1879268330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f52eedbd3af1554493484c2631b2acf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1884549985
 GameObject:
   m_ObjectHideFlags: 0
@@ -8448,6 +8425,7 @@ GameObject:
   - component: {fileID: 1951093056}
   - component: {fileID: 1951093055}
   - component: {fileID: 1951093054}
+  - component: {fileID: 1951093057}
   m_Layer: 0
   m_Name: doctor
   m_TagString: character
@@ -8522,6 +8500,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1951093052}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1951093057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951093052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aaf3d7aa0f5da94c84eec67c195348e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975114487
 GameObject:
   m_ObjectHideFlags: 0
@@ -8642,6 +8631,7 @@ GameObject:
   - component: {fileID: 2011695178}
   - component: {fileID: 2011695177}
   - component: {fileID: 2011695176}
+  - component: {fileID: 2011695179}
   m_Layer: 0
   m_Name: leutnantin
   m_TagString: character
@@ -8716,6 +8706,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2011695174}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2011695179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011695174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f2b0e2adca936340be83592f016e304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2099062491
 GameObject:
   m_ObjectHideFlags: 0
