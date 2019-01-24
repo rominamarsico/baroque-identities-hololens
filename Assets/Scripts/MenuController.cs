@@ -10,7 +10,7 @@ public class MenuController : MonoBehaviour
     public bool IsInventar = true;
     public GameObject CursorArrowRechts;
     public GameObject CursorArrowLinks;
-    public GameObject PlayButton;
+    public GameObject MissionPlan;
     public GameObject[] InventaryObjects;
     public IList<GameObject> newInventoryObjects;
     public IList<GameObject> TextObjects;
@@ -104,6 +104,7 @@ public class MenuController : MonoBehaviour
         }
         
         HideText();
+        IntroSound.Play();
     }
 
     void Update()
@@ -123,6 +124,8 @@ public class MenuController : MonoBehaviour
 
     IEnumerator GetClickedMenu()
     {
+        StartCoroutine(ClearNfcInput());
+
         UnityWebRequest wwwInventar = new UnityWebRequest("https://baroque-identities.firebaseio.com/Inventar/val/.json?print=pretty/");
         wwwInventar.downloadHandler = new DownloadHandlerBuffer();
         wwwInventar.chunkedTransfer = false;
@@ -164,12 +167,14 @@ public class MenuController : MonoBehaviour
         {
             Debug.Log(wwwInventar.downloadHandler.text);
             OnTriggerInventar();
+            HideMission();
         }
         else if (character.Contains("Character"))
         {
             Debug.Log(wwwCharacter.downloadHandler.text);
             Characters();
             HideInventar();
+            HideMission();
         }
         else if (mission.Contains("Mission"))
         {
@@ -182,6 +187,7 @@ public class MenuController : MonoBehaviour
         {
             Debug.Log("No menu controller is triggert.");
             HideInventar();
+            HideMission();
         }
     }
 
@@ -285,12 +291,6 @@ public class MenuController : MonoBehaviour
         menuItemClick.Play();
     }
 
-    public void OnPlayButtonClick()
-    {
-        IntroSound.Play();
-        PlayButton.SetActive(false);
-    }
-
     public void OnTriggerInventar(){
         if (IsInventar == true)
         {
@@ -371,7 +371,6 @@ public class MenuController : MonoBehaviour
         foreach (GameObject _gameObject in newInventoryObjects)
         {
             _gameObject.SetActive(false);
-            StartCoroutine(ClearNfcInput());
         }
     }
 
@@ -494,6 +493,11 @@ public class MenuController : MonoBehaviour
     }
 
     public void Mission () {
-        //Debug.Log("Mission");
+        MissionPlan.SetActive(true);
+        MissionPlan.transform.position = new Vector3(0, 0, 9);
+    }
+
+    public void HideMission () {
+        MissionPlan.SetActive(false);
     }
 }
