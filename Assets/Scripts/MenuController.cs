@@ -10,6 +10,7 @@ public class MenuController : MonoBehaviour
     public bool IsInventar = true;
     public GameObject CursorArrowRechts;
     public GameObject CursorArrowLinks;
+    public GameObject PlayButton;
     public GameObject[] InventaryObjects;
     public IList<GameObject> newInventoryObjects;
     public IList<GameObject> TextObjects;
@@ -32,17 +33,17 @@ public class MenuController : MonoBehaviour
     public GameObject Schatulle;
     public GameObject Brief_August;
     public GameObject Brief_Februar;
-    public GameObject Brief_Juni;
     public GameObject Brief_Maerz;
     public GameObject Brief_Mai_1741;
     public GameObject Brief_Mai_1754;
     public GameObject Zettel_am_Kompass;
     public GameObject zweiDamen;
-    public GameObject Deer_Brosche;
 
     //Inventar Tatort
     public GameObject Geburtsurkunde;
     public GameObject Tuch;
+    public GameObject Deer_Brosche;
+    public GameObject Brief_Juni;
 
     //Inventar Texte
     public GameObject Panel;
@@ -73,7 +74,7 @@ public class MenuController : MonoBehaviour
     //Audio Source Clicks
     public AudioSource menuArrowButtonClick;
     public AudioSource menuItemClick;
-    //public AudioSource scan;
+    public AudioSource scanSound;
 
     //Audio Source NFC tags
     public AudioSource ArchiveSound;
@@ -84,6 +85,7 @@ public class MenuController : MonoBehaviour
     public AudioSource skizzeFrauSound;
     public AudioSource skizzenBuchSound;
     public AudioSource zettelKompassSound;
+    public AudioSource zweiDamenSound;
 
     void Awake ()
     {
@@ -116,6 +118,7 @@ public class MenuController : MonoBehaviour
         wwwClearNfcInput.downloadHandler = new DownloadHandlerBuffer();
         wwwClearNfcInput.chunkedTransfer = false;
         yield return wwwClearNfcInput.SendWebRequest();
+        Debug.Log("clear nfc input");
     }
 
     IEnumerator GetClickedMenu()
@@ -222,18 +225,22 @@ public class MenuController : MonoBehaviour
         else if (nfcTag.Contains("2damen") && !newInventoryObjects.Contains(zweiDamen))
         {
             newInventoryObjects.Add(zweiDamen);
+            zweiDamenSound.Play();
         }
         else if (nfcTag.Contains("Deer") && !newInventoryObjects.Contains(Deer_Brosche))
         {
             newInventoryObjects.Add(Deer_Brosche);
+            scanSound.Play();
         }
         else if (nfcTag.Contains("tuch") && !newInventoryObjects.Contains(Tuch))
         {
             newInventoryObjects.Add(Tuch);
+            scanSound.Play();
         }
         else if (nfcTag.Contains("geburtsurkunde") && !newInventoryObjects.Contains(Geburtsurkunde))
         {
             newInventoryObjects.Add(Geburtsurkunde);
+            scanSound.Play();
         }
         else if (nfcTag.Contains("zettelKompass") && !newInventoryObjects.Contains(Zettel_am_Kompass))
         {
@@ -248,6 +255,7 @@ public class MenuController : MonoBehaviour
         else if (nfcTag.Contains("briefJuni") && !newInventoryObjects.Contains(Brief_Juni))
         {
             newInventoryObjects.Add(Brief_Juni);
+            scanSound.Play();
         }
         else if (nfcTag.Contains("skizzeFrau") && !newInventoryObjects.Contains(skizze_mit_frau))
         {
@@ -275,6 +283,12 @@ public class MenuController : MonoBehaviour
     public void OnBackButtonClick()
     {
         menuItemClick.Play();
+    }
+
+    public void OnPlayButtonClick()
+    {
+        IntroSound.Play();
+        PlayButton.SetActive(false);
     }
 
     public void OnTriggerInventar(){
@@ -357,6 +371,7 @@ public class MenuController : MonoBehaviour
         foreach (GameObject _gameObject in newInventoryObjects)
         {
             _gameObject.SetActive(false);
+            StartCoroutine(ClearNfcInput());
         }
     }
 
