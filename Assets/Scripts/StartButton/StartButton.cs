@@ -7,6 +7,6 @@ public class StartButton : MonoBehaviour {
 
     public void OnPlayButtonClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("IntroMission");
     }
 }

@@ -120,7 +120,6 @@ public class MenuController : MonoBehaviour
         }
         
         HideText();
-        IntroSound.Play();
     }
 
     void Update()
@@ -328,6 +327,7 @@ public class MenuController : MonoBehaviour
         //else
             //Debug.Log("IsInventar is false");
     }
+
     public void TrueInventar(){
         IsInventar = true;
     }
@@ -358,11 +358,17 @@ public class MenuController : MonoBehaviour
     {
         IsInventar = false;
         HideInventar();
+        HideArrows();
         Panel.SetActive(true);
         inventoryItem.transform.position = new Vector3(-1, 0, 9);
         inventoryItem.SetActive(true);
         inventoryItemText.SetActive(true);
         menuItemClick.Play();
+    }
+
+    public void OnCharacterClick()
+    {
+
     }
 
     public void SelectPortraitLudwig()

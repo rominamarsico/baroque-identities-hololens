@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Start.unity
     guid: 71f22484b1af87242b7b72c0c129b70c
   - enabled: 1
+    path: Assets/Scenes/IntroMission.unity
+    guid: 0c62154fafa89834fa72e8e09d945f79
+  - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 152300987600dbf4e9445e14ddc1a7b0
   m_configObjects: {}

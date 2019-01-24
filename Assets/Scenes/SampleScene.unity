@@ -5006,6 +5006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ae7fac4a98594292bbede1d7633b679, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TestCube: {fileID: 0}
   Left: 0
   right: 0
   IsInventar: 1
@@ -5075,12 +5076,12 @@ MonoBehaviour:
   TuchText: {fileID: 717779204}
   GeburtsurkundeText: {fileID: 495891162}
   DeerBroscheText: {fileID: 1167880768}
-  doctorPortrait: {fileID: 0}
-  eduardoPortrait: {fileID: 0}
-  karolinePortrait: {fileID: 0}
-  leutnantinPortrait: {fileID: 0}
-  ludwigPortrait: {fileID: 0}
-  malerPortrait: {fileID: 0}
+  doctorPortrait: {fileID: 1951093052}
+  eduardoPortrait: {fileID: 1484640230}
+  karolinePortrait: {fileID: 1879268330}
+  leutnantinPortrait: {fileID: 2011695174}
+  ludwigPortrait: {fileID: 249843658}
+  malerPortrait: {fileID: 179588160}
   menuArrowButtonClick: {fileID: 1077009419}
   menuItemClick: {fileID: 1077009418}
   scanSound: {fileID: 1077009420}
@@ -8113,7 +8114,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClickLeft: 0
   CharacterArrowClickLeft: 0
-  ObjectCounter: 0
   click: {fileID: 2099062493}
 --- !u!82 &2099062493
 AudioSource:
