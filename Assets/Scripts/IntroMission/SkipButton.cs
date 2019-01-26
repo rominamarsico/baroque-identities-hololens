@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class StartButton : MonoBehaviour {
+public class SkipButton : MonoBehaviour {
 
     public AudioSource ButtonClick;
 
-    public void OnPlayButtonClick()
+    public void OnSkipButtonClick()
     {
         ButtonClick.Play();
-        SceneManager.LoadScene("IntroMission");
+        SceneManager.LoadScene("SampleScene");
     }
 }

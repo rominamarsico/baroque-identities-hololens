@@ -457,7 +457,7 @@ Transform:
   m_LocalScale: {x: 0.608, y: 0.60899997, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 604322167}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!65 &179588162
 BoxCollider:
@@ -676,9 +676,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Rote H\xE4nde des Jungen Eduards. Als man den Jungen aufsp\xFCrte, wiesen
-    seine H\xE4nde verd\xE4chtige rote Farbflecken auf! Ein klarer Beweis, dass er
-    der T\xE4ter sein muss, oder?"
+  m_Text: "Landgr\xE4fin Karoline von Pfalz\nDie Gattin des Gastgebers. Eisig und
+    k\xFChl gab sie sich vor der Enth\xFCllung des Portraits Ludwigs, wurde jedoch
+    gleich aktiv als sie das besudelte Bild sah. Sie wirkte fast schon hysterisch
+    bei diesem Anblick - kaum zu ver\xFCbeln. Man munkelt in Kranichstein, sie sei
+    der einzige Mann bei Hofe."
 --- !u!222 &205029434
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1077,7 +1079,7 @@ Transform:
   m_LocalScale: {x: 0.608, y: 0.60899997, z: 0.099999994}
   m_Children: []
   m_Father: {fileID: 604322167}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!65 &249843660
 BoxCollider:
@@ -1514,10 +1516,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ein ansehnliches Gem\xE4lde Ludwigs mit einem Gewehr. Gro\xDF und stark
-    portraitiert, so wie es bei Landherren wie ihm \xFCblich war. Doch es wurde mit
-    roter Farbe beschmiert. Die Inschrift zeigt M\xF6rder. \nWas hat dies zu bedeuten?
-    Finde den T\xE4ter!"
+  m_Text: "Doctor Gilbert\nDer Leibarzt bei Hofe. Ein loyaler Bursche, der weder zu
+    viel schweigt noch prahlt. So wirkt er oft sehr hilfsbereit und offen gegen\xFCber
+    deinen Fragen. \r\nAls der Junge Ed beschuldigt wird, das Bild beschmutzt zu haben,
+    greift er ein und nimmt ihn in Schutz. Er habe den Maler im Visier, gesteht er.
+    \r\nWelche Beziehung der B\xFCchsenjunge und er wohl haben?"
 --- !u!222 &305297148
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1671,8 +1674,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Ein Pinsel mit Naturhaarfasern, das Werkzeug eines Meisters. Ein kleines
-    G. weist auf den Maler Georg hin. Der Pinsel muss also ihm geh\xF6ren."
+  m_Text: "Eduard \u201CEd\u201D\nEin junger B\xFCchsenjunge, mehr noch ein Kind bei
+    Hofe. Er wirkt verwirrt und zur\xFCckhaltend. Als man ihn im Stall entdeckte,
+    wiesen seine H\xE4nde rote Farbe auf. \xC4u\xDFerst verd\xE4chtig! "
 --- !u!222 &424671686
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1789,7 +1793,6 @@ RectTransform:
   - {fileID: 305297146}
   - {fileID: 424671684}
   - {fileID: 205029432}
-  - {fileID: 1187706906}
   - {fileID: 652583546}
   - {fileID: 1401317696}
   m_Father: {fileID: 924111856}
@@ -2583,7 +2586,6 @@ Transform:
   - {fileID: 1951093053}
   - {fileID: 1484640231}
   - {fileID: 1879268331}
-  - {fileID: 2011695175}
   - {fileID: 249843659}
   - {fileID: 179588161}
   m_Father: {fileID: 1077009425}
@@ -2848,7 +2850,7 @@ RectTransform:
   m_LocalScale: {x: 3.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 460440186}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2888,11 +2890,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Die mit Pressluft kalibrierten Gro\xDFkugeln schienen ger\xE4uschlos. Diese
-    Exemplare sind heutzutage verboten mit der Begr\xFCndung, dass man \u201Emit solch
-    m\xF6rderisch Waffen einen Menschen hinrichten k\xF6nne, unvermerkt, wo es herkomme\u201C.\nDie
-    Initialen am Griff weisen auf den Besitzer der Waffe hin.\nK. v. P. - Kaliber,
-    Waffenl\xE4nge 120 cm, Gewehrkugeln 7 g, Alleingewicht: 20 kg"
+  m_Text: "Ludwig der lX. von Hessen Darmstadt\nEin stattlicher Herr von edlem Hause
+    und einer gepuderten Nase. \r\nEr lud dich auf sein Schloss f\xFCr die Enth\xFCllung
+    seines neuen Gem\xE4ldes, das mit einem anschlie\xDFenden Jagdspektakel gekr\xF6nt
+    werden sollte. Nur leider trieb da jemand einen Spa\xDF mit ihm und sein sch\xF6nes
+    Bild ist nun dahin. Er war emp\xF6rt \xFCber diese Schmach, doch ergriff er nicht
+    zuerst das Wort, den \xDCbelt\xE4ter dingfest zu machen - da hat wohl jemand anderes
+    die Hosen an?"
 --- !u!222 &652583548
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3782,6 +3786,7 @@ RectTransform:
   - {fileID: 1000790429}
   - {fileID: 666742976}
   - {fileID: 460440186}
+  - {fileID: 1520569704}
   m_Father: {fileID: 1241502159}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5435,6 +5440,7 @@ MonoBehaviour:
   CursorArrowRechts: {fileID: 1268913048}
   CursorArrowLinks: {fileID: 2099062491}
   MissionPlan: {fileID: 2147002913}
+  RepeatButton: {fileID: 1340031814}
   InventaryObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -5499,13 +5505,11 @@ MonoBehaviour:
   doctorPortrait: {fileID: 1951093052}
   eduardoPortrait: {fileID: 1484640230}
   karolinePortrait: {fileID: 1879268330}
-  leutnantinPortrait: {fileID: 2011695174}
   ludwigPortrait: {fileID: 249843658}
   malerPortrait: {fileID: 179588160}
   doctorText: {fileID: 305297145}
   eduardoText: {fileID: 424671683}
   karolineText: {fileID: 205029431}
-  leutnantinText: {fileID: 1187706905}
   ludwigText: {fileID: 652583545}
   malerText: {fileID: 1401317693}
   menuArrowButtonClick: {fileID: 1077009419}
@@ -5716,88 +5720,6 @@ RectTransform:
   m_AnchoredPosition: {x: 566.8946, y: 94.000244}
   m_SizeDelta: {x: 160.5, y: 143.92}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1187706905
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1057638486659534, guid: a868a089976b08b48a5ce66ce71cda3d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1187706906}
-  - component: {fileID: 1187706908}
-  - component: {fileID: 1187706907}
-  m_Layer: 5
-  m_Name: LeutnantinText
-  m_TagString: Text
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1187706906
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 224488056357156658, guid: a868a089976b08b48a5ce66ce71cda3d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1187706905}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 460440186}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.8951823, y: 39.001465}
-  m_SizeDelta: {x: 160.5, y: 143.92}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1187706907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114037814621431128, guid: a868a089976b08b48a5ce66ce71cda3d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1187706905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 47
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 1
-    m_LineSpacing: 1
-  m_Text: "Die mit Pressluft kalibrierten Gro\xDFkugeln schienen ger\xE4uschlos. Diese
-    Exemplare sind heutzutage verboten mit der Begr\xFCndung, dass man \u201Emit solch
-    m\xF6rderisch Waffen einen Menschen hinrichten k\xF6nne, unvermerkt, wo es herkomme\u201C.\nDie
-    Initialen am Griff weisen auf den Besitzer der Waffe hin.\nH. v. G.- Kaliber,
-    Waffenl\xE4nge 130 cm, Gewehrkugeln 5 g, Alleingewicht 25 kg"
---- !u!222 &1187706908
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 222744783246030518, guid: a868a089976b08b48a5ce66ce71cda3d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1187706905}
 --- !u!1 &1201482449
 GameObject:
   m_ObjectHideFlags: 0
@@ -5936,6 +5858,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 924111856}
+  - {fileID: 1340031815}
   m_Father: {fileID: 1077009425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6565,6 +6488,147 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1303076824}
+--- !u!1 &1340031814
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1009181216751418, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1340031815}
+  - component: {fileID: 1340031819}
+  - component: {fileID: 1340031818}
+  - component: {fileID: 1340031817}
+  - component: {fileID: 1340031816}
+  m_Layer: 5
+  m_Name: ButtonRepeatMission
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1340031815
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224734604780331396, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340031814}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -36.8}
+  m_LocalScale: {x: 0.012, y: 0.01, z: 1}
+  m_Children:
+  - {fileID: 1665960131}
+  m_Father: {fileID: 1241502159}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -384.49503, y: -211.755}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1340031816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 65952991269432438, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340031814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1340031817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114541695840411006, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340031814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.4, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.4, g: 0, b: 0, a: 0.5294118}
+    m_PressedColor: {r: 0.4, g: 0, b: 0, a: 0.5294118}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1340031818}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1077009424}
+        m_MethodName: OnRepeatMissionButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1340031818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114463126701985164, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340031814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1340031819
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222306293416984600, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1340031814}
 --- !u!1 &1343756004
 GameObject:
   m_ObjectHideFlags: 0
@@ -6665,11 +6729,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Die mit Pressluft kalibrierten Gro\xDFkugeln schienen ger\xE4uschlos. Diese
-    Exemplare sind heutzutage verboten mit der Begr\xFCndung, dass man \u201Emit solch
-    m\xF6rderisch Waffen einen Menschen hinrichten k\xF6nne, unvermerkt, wo es herkomme\u201C.\nDie
-    Initialen am Griff weisen auf den Besitzer der Waffe hin.\nL. v. H. -  Waffenl\xE4nge
-    130 cm, Gewehrkugeln 6 g, Alleingewicht 30 kg"
+  m_Text: "Maler Georg\nDer Hofmaler der Grafen. Man sagt, er habe das neue Portrait
+    Ludwigs angefertigt, jedoch bleibt er seit der Enth\xFCllung des Bildes verschwunden.
+    Sehr verd\xE4chtig, so sagt auch der Leibarzt Gilbert. "
 --- !u!222 &1401317695
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6689,7 +6751,7 @@ RectTransform:
   m_LocalScale: {x: 3.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 460440186}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6949,6 +7011,169 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1514764895}
   m_Mesh: {fileID: 4300000, guid: 6624cea08d19a457683f57b18aa885f3, type: 3}
+--- !u!1 &1520569703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1009181216751418, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1520569704}
+  - component: {fileID: 1520569708}
+  - component: {fileID: 1520569707}
+  - component: {fileID: 1520569706}
+  - component: {fileID: 1520569705}
+  m_Layer: 5
+  m_Name: BackButtonCharacters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1520569704
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224734604780331396, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520569703}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_Children:
+  - {fileID: 1853824461}
+  m_Father: {fileID: 924111856}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -566.0007, y: -149.00024}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1520569705
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 65952991269432438, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520569703}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1520569706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114541695840411006, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520569703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.4, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.4, g: 0, b: 0, a: 0.5294118}
+    m_PressedColor: {r: 0.4, g: 0, b: 0, a: 0.5294118}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1520569707}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1077009424}
+        m_MethodName: Characters
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1077009424}
+        m_MethodName: TrueCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1077009424}
+        m_MethodName: OnBackButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1520569707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114463126701985164, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520569703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1520569708
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222306293416984600, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520569703}
 --- !u!1 &1538566767
 GameObject:
   m_ObjectHideFlags: 0
@@ -7368,6 +7593,84 @@ MonoBehaviour:
   m_Script: {fileID: 1898958984, guid: f7b54ff4a43d4fcf81b4538b678e0bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1665960130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1938147706852340, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1665960131}
+  - component: {fileID: 1665960133}
+  - component: {fileID: 1665960132}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1665960131
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224322508509519324, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1665960130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.64, y: 0.74, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1340031815}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1665960132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114348447210935018, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1665960130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Erkl\xE4rung zur Mission wiederholen"
+--- !u!222 &1665960133
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222801181339404636, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1665960130}
 --- !u!1 &1683811360
 GameObject:
   m_ObjectHideFlags: 0
@@ -7933,6 +8236,84 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1827382025}
   m_Mesh: {fileID: 4300004, guid: a6b15b48645faf3488eba9284510fbb5, type: 3}
+--- !u!1 &1853824460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1938147706852340, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1853824461}
+  - component: {fileID: 1853824463}
+  - component: {fileID: 1853824462}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1853824461
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224322508509519324, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853824460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.24, y: 0.74, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1520569704}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1853824462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114348447210935018, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853824460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Zur\xFCck"
+--- !u!222 &1853824463
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222801181339404636, guid: a868a089976b08b48a5ce66ce71cda3d,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853824460}
 --- !u!1 &1879268330
 GameObject:
   m_ObjectHideFlags: 0
@@ -8620,103 +9001,6 @@ Transform:
   m_Father: {fileID: 457302423}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2011695174
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2011695175}
-  - component: {fileID: 2011695178}
-  - component: {fileID: 2011695177}
-  - component: {fileID: 2011695176}
-  - component: {fileID: 2011695179}
-  m_Layer: 0
-  m_Name: leutnantin
-  m_TagString: character
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2011695175
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2011695174}
-  m_LocalRotation: {x: -0, y: -0, z: 1, w: 0}
-  m_LocalPosition: {x: 1.208, y: 0, z: -39.5}
-  m_LocalScale: {x: 0.608, y: 0.60899997, z: 0.099999994}
-  m_Children: []
-  m_Father: {fileID: 604322167}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
---- !u!65 &2011695176
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2011695174}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2011695177
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2011695174}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100000, guid: 6bbe3dc90ee9fc44fa6ead88c11dbd92, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &2011695178
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2011695174}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2011695179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2011695174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f2b0e2adca936340be83592f016e304, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2099062491
 GameObject:
   m_ObjectHideFlags: 0

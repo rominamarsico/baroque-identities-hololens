@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MenuController : MonoBehaviour
     public GameObject CursorArrowRechts;
     public GameObject CursorArrowLinks;
     public GameObject MissionPlan;
+    public GameObject RepeatButton;
     public GameObject[] InventaryObjects;
 
     public IList<GameObject> newInventoryObjects;
@@ -83,7 +85,6 @@ public class MenuController : MonoBehaviour
     public GameObject doctorPortrait;
     public GameObject eduardoPortrait;
     public GameObject karolinePortrait;
-    public GameObject leutnantinPortrait;
     public GameObject ludwigPortrait;
     public GameObject malerPortrait;
 
@@ -91,7 +92,6 @@ public class MenuController : MonoBehaviour
     public GameObject doctorText;
     public GameObject eduardoText;
     public GameObject karolineText;
-    public GameObject leutnantinText;
     public GameObject ludwigText;
     public GameObject malerText;
 
@@ -207,7 +207,6 @@ public class MenuController : MonoBehaviour
         }
         else if (mission.Contains("Mission"))
         {
-            //Debug.Log("Mission database text: ");
             Debug.Log(wwwMission.downloadHandler.text);
             Mission();
             HideInventar();
@@ -392,12 +391,21 @@ public class MenuController : MonoBehaviour
     public void Mission()
     {
         MissionPlan.SetActive(true);
+        RepeatButton.SetActive(true);
         MissionPlan.transform.position = new Vector3(0, 0, 9);
+        RepeatButton.transform.position = new Vector3(0, -1, 9);
     }
 
     public void HideMission()
     {
         MissionPlan.SetActive(false);
+        RepeatButton.SetActive(false);
+    }
+
+    public void OnRepeatMissionButtonClick()
+    {
+        menuArrowButtonClick.Play();
+        SceneManager.LoadScene("IntroMission");
     }
 
     public void OnInventoryItemClick(GameObject inventoryItem, GameObject inventoryItemText)
@@ -528,10 +536,6 @@ public class MenuController : MonoBehaviour
     public void OnClickKaroline()
     {
         OnCharacterClick(karolinePortrait, karolineText);
-    }
-    public void OnClickLeutnantin()
-    {
-        OnCharacterClick(leutnantinPortrait, leutnantinText);
     }
     public void OnClickLudwig()
     {
