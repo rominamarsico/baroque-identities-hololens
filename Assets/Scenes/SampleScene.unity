@@ -5437,10 +5437,7 @@ MonoBehaviour:
   IsCharacter: 1
   InventoryArrows: 0
   CharacterArrows: 0
-  CursorArrowRechts: {fileID: 1268913048}
-  CursorArrowLinks: {fileID: 2099062491}
   MissionPlan: {fileID: 2147002913}
-  RepeatButton: {fileID: 1340031814}
   InventaryObjects:
   - {fileID: 0}
   - {fileID: 0}
@@ -5454,6 +5451,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  CursorArrowRechts: {fileID: 1268913048}
+  CursorArrowLinks: {fileID: 2099062491}
+  RepeatButton: {fileID: 1340031814}
+  CharacterBackButton: {fileID: 1520569703}
+  InventoryBackButton: {fileID: 1000790428}
   pinsel: {fileID: 1821844116}
   portraitludwig: {fileID: 1884549985}
   rotehand: {fileID: 726907715}
@@ -9429,7 +9431,7 @@ BoxCollider:
   m_GameObject: {fileID: 2147002913}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}

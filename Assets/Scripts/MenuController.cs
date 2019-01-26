@@ -13,16 +13,20 @@ public class MenuController : MonoBehaviour
     public bool InventoryArrows = false;
     public bool CharacterArrows = false;
 
-    public GameObject CursorArrowRechts;
-    public GameObject CursorArrowLinks;
     public GameObject MissionPlan;
-    public GameObject RepeatButton;
     public GameObject[] InventaryObjects;
 
     public IList<GameObject> newInventoryObjects;
     public IList<GameObject> TextObjects;
     public IList<GameObject> PortraitImages;
     public IList<GameObject> PortraitTexts;
+
+    //Button
+    public GameObject CursorArrowRechts;
+    public GameObject CursorArrowLinks;
+    public GameObject RepeatButton;
+    public GameObject CharacterBackButton;
+    public GameObject InventoryBackButton;
 
     //Inventar von Beginn an
     public GameObject pinsel;
@@ -111,11 +115,6 @@ public class MenuController : MonoBehaviour
     public AudioSource zettelKompassSound;
     public AudioSource zweiDamenSound;
 
-    void Awake ()
-    {
-        StartCoroutine(ClearNfcInput());
-    }
-
     // Use this for initialization
     void Start () {
         InventaryObjects = GameObject.FindGameObjectsWithTag("Inventar");
@@ -123,10 +122,10 @@ public class MenuController : MonoBehaviour
         TextObjects = GameObject.FindGameObjectsWithTag("Text");
         PortraitImages = GameObject.FindGameObjectsWithTag("character");
 
-        for (int i = 0; i <TextObjects.Count; i++)
+        /*for (int i = 0; i <TextObjects.Count; i++)
         {
-            // Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
-        }
+            Debug.Log("Inventar Number " + i + " is named " + TextObjects[i].name);
+        }*/
         
         HideText();
     }
@@ -148,7 +147,7 @@ public class MenuController : MonoBehaviour
 
     IEnumerator GetClickedMenu()
     {
-        StartCoroutine(ClearNfcInput());
+        //StartCoroutine(ClearNfcInput());
 
         UnityWebRequest wwwInventar = new UnityWebRequest("https://baroque-identities.firebaseio.com/Inventar/val/.json?print=pretty/");
         wwwInventar.downloadHandler = new DownloadHandlerBuffer();
@@ -307,6 +306,7 @@ public class MenuController : MonoBehaviour
         else
         {
             Debug.Log("no nfc tag scanned");
+            //ClearNfcInput();
         }
     }
 
@@ -332,11 +332,10 @@ public class MenuController : MonoBehaviour
         {
             Inventar();
         }
-        //else
-            //Debug.Log("IsInventar is false");
     }
 
-    public void TrueInventar(){
+    public void TrueInventar()
+    {
         IsInventar = true;
     }
 
@@ -355,6 +354,8 @@ public class MenuController : MonoBehaviour
 
     public void Inventar()
     {
+        CharacterBackButton.SetActive(false);
+        InventoryBackButton.SetActive(true);
         buildMenu(newInventoryObjects, CursorArrowRechts.GetComponent<CursorArrowRechts>().ClickRight, CursorArrowLinks.GetComponent<CursorArrowLinks>().ClickLeft, ObjectCounter);
     }
 
@@ -377,6 +378,8 @@ public class MenuController : MonoBehaviour
 
     public void Characters()
     {
+        InventoryBackButton.SetActive(false);
+        CharacterBackButton.SetActive(true);
         buildMenu(PortraitImages, CursorArrowRechts.GetComponent<CursorArrowRechts>().CharacterArrowClickRight, CursorArrowLinks.GetComponent<CursorArrowLinks>().CharacterArrowClickLeft, CharacterObjectCounter);
     }
 
@@ -390,6 +393,7 @@ public class MenuController : MonoBehaviour
 
     public void Mission()
     {
+        //ClearNfcInput();
         MissionPlan.SetActive(true);
         RepeatButton.SetActive(true);
         MissionPlan.transform.position = new Vector3(0, 0, 9);
@@ -550,6 +554,7 @@ public class MenuController : MonoBehaviour
     {
         Arrows();
         HideText();
+        //ClearNfcInput();
         var ClickCounter = ClickCounterRight - ClickCounterLeft;
 
         if (ObjectCounter == 0)
